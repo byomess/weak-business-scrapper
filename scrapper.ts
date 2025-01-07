@@ -235,7 +235,8 @@ class InformationQualityAnalyzer {
     try {
       // Remove code blocks if present
       const jsonString = generatedContent
-        .replace(/```json\s*([\s\S]*?)\s*```/, "$1")
+        .replace(/```json/g, "")
+        .replace(/```/g, "")
         .trim();
 
       const analysisResult = JSON.parse(jsonString) as AddressAnalysisResult;
@@ -449,6 +450,13 @@ class FileUtils {
       markdown += `- **Avaliações:** ${
         place.result.user_ratings_total || 0
       } avaliações, Nota média: ${place.result.rating || "N/A"}\n`;
+
+      markdown += `- **Fotos:** ${
+        place.result.photos
+          ? place.result.photos.length
+          : "Nenhuma"
+      }\n`;
+
       markdown += `- **Endereço:** ${
         place.result.formatted_address || "Não informado"
       }\n`;
@@ -635,7 +643,8 @@ class AIPlaceScoreCalculator implements PlaceScoreCalculator {
     try {
       // Remove code blocks if present
       const jsonString = generatedContent
-        .replace(/```json\s*([\s\S]*?)\s*```/, "$1")
+        .replace(/```json/g, "")
+        .replace(/```/g, "")
         .trim();
 
       const parsedResponse = JSON.parse(jsonString);
@@ -662,28 +671,74 @@ class AIPlaceScoreCalculator implements PlaceScoreCalculator {
 
   private buildPrompt(place: PlaceDetailsResult): string {
     return `
-Você é um especialista em análise de dados de estabelecimentos comerciais. Sua tarefa é avaliar a qualidade das informações de um estabelecimento com base nos dados fornecidos e atribuir um score de 0 a 100.
+Você é um especialista em análise de dados de estabelecimentos comerciais do Google Meu Negócio. Sua tarefa é avaliar a qualidade das informações de um estabelecimento com base nos dados fornecidos e atribuir um score de 0 a 100.
 
 Um score mais alto indica que o estabelecimento tem informações mais completas, atualizadas e de alta qualidade em seu perfil, sugerindo que é um negócio bem gerenciado e menos propenso a precisar de serviços de marketing digital. Por outro lado, um score mais baixo sugere que o estabelecimento tem informações incompletas, desatualizadas ou de baixa qualidade, tornando-o um lead mais qualificado para serviços de marketing digital.
 
-Considere os seguintes fatores ao avaliar o estabelecimento:
+**Analise os seguintes critérios e use todos os dados disponíveis no JSON fornecido para pontuar o estabelecimento:**
 
-- **Completude das informações:** O estabelecimento possui website, número de telefone, horário de funcionamento, fotos e uma descrição detalhada?
-- **Qualidade das fotos:** As fotos são de alta qualidade e representam bem o estabelecimento?
-- **Avaliações:** O estabelecimento possui muitas avaliações? A nota média é alta? As avaliações são recentes e relevantes?
-- **Interação com clientes:** O estabelecimento responde às avaliações dos clientes?
-- **Presença online:** O estabelecimento tem um website bem projetado e otimizado para SEO? Ele está ativo nas redes sociais?
-- **Atualização das informações:** As informações do estabelecimento estão atualizadas e consistentes em diferentes plataformas?
+**I. Informações Básicas e Completude:**
+
+1. **Existência e Validade de Dados Essenciais:**
+    *   **Nome:** O nome está presente e é coerente com um estabelecimento comercial?
+    *   **Endereço:** O endereço está completo (rua, número, bairro, cidade, estado, CEP)? A formatação está correta?
+    *   **Telefone:** O telefone está presente e em formato válido (considerando telefones fixos e celulares, locais e internacionais)?
+    *   **Website:** O website está presente? É um site próprio ou um link para rede social? (Redes sociais são menos desejáveis). O website fornecido é válido e acessível?
+    *   **Status de Funcionamento:** O \`business_status\` é \`OPERATIONAL\`? Outros status indicam problemas.
+
+2. **Horário de Funcionamento:**
+    *   **Disponibilidade:** O horário de funcionamento está presente?
+    *   **Detalhes:** O horário para cada dia da semana está especificado (\`weekday_text\`)?
+    *   **Consistência:** O horário está consistente com o tipo de negócio? (Por exemplo, um restaurante não deveria fechar no horário de almoço).
+    *   **\`current_opening_hours\` e \`open_now\`: ** O estabelecimento está aberto no momento da análise? Isso pode indicar se o horário está atualizado.
+
+**II. Engajamento e Reputação:**
+
+3. **Avaliações:**
+    *   **Quantidade:** Qual o \`user_ratings_total\`? Um número alto indica popularidade e engajamento.
+    *   **Nota Média (\`rating\`):** Qual a nota média? Notas acima de 4.5 são consideradas excelentes.
+    *   **Recência das Avaliações:** As avaliações são recentes (últimos 3 meses)? Avaliações antigas podem não refletir a realidade atual.
+    *   **Qualidade das Avaliações:** As avaliações possuem texto, além da nota? Avaliações com texto são mais valiosas.
+    *   **Presença de avaliações negativas:** Existem avaliações com nota baixa (1 ou 2)? Isso pode indicar problemas a serem resolvidos.
+
+**III. Presença Online e Qualidade da Informação:**
+
+5. **Fotos:**
+    *   **Quantidade:** Quantas fotos (\`photos\`) o estabelecimento possui?
+    *   **Qualidade:** As fotos são de alta resolução (\`height\`, \`width\`)?
+    *   **Diversidade:** As fotos mostram o interior, o exterior, os produtos, a equipe e clientes (se aplicável)?
+    *   **\`html_attributions\`: ** As fotos são atribuídas ao proprietário do negócio ou a usuários? Fotos do proprietário são preferíveis.
+
+6. **Atributos (\`types\`):**
+    *   **Relevância:** Os \`types\` atribuídos ao estabelecimento são relevantes e específicos? Por exemplo, "restaurant" é menos específico do que "italian_restaurant".
+    *   **Quantidade:** Há uma boa quantidade de \`types\` atribuídos, detalhando bem o negócio?
+
+7. **\`plus_code\`**
+    *   **Disponibilidade**: O estabelecimento possui \`plus_code\`? O \`plus_code\` pode ser usado para identificar a localização do estabelecimento, especialmente em áreas onde o endereçamento tradicional não é tão preciso.
+
+8. **\`vicinity\`**
+    *   **Informatividade**: O campo \`vicinity\` oferece uma descrição útil e concisa da localização do estabelecimento, especialmente quando o endereço completo não está disponível ou é muito longo?
+
+**IV. Dados Adicionais (Menor Peso na Pontuação):**
+
+9. **Outros Atributos:**
+*   **\`reservable\`, \`serves_breakfast\`, \`serves_lunch\`, \`serves_dinner\`, \`serves_beer\`, \`serves_wine\`, \`takeout\`, \`delivery\`, \`dine_in\`, \`wheelchair_accessible_entrance\`, \`curbside_pickup\`:** Estes atributos, quando presentes, indicam um maior detalhamento do perfil e dos serviços oferecidos.
+
+**Não mencione na resposta critérios que dependem de análises manuais ou que vão além das informações oferecidas acima, como a qualidade do website e a interação nas redes sociais.**
 
 Aqui estão os dados do estabelecimento:
 
+\`\`\`json
 ${JSON.stringify(place.result, null, 2)}
+\`\`\`
 
 Com base nesses dados, atribua um score de 0 a 100 ao estabelecimento e forneça uma lista de feedbacks com sugestões de melhorias, quando aplicável.
 
 Não crie feedbacks que não tenham como base dados disponíveis do JSON fornecido acima, ou seja, não faça presunções.
 
-Quando aplicável, escreva uma mensagem personalizada que poderá ser usada para enviar ao WhatsApp do estabelecimento, oferecendo o serviço de consultoria e atualização dos dados no Google Meu Negócio. Escreva uma mensagem com alto potencial de venda, que seja concisa e aponte as melhorias mais importantes que podem ser feitas, baseada na análise.
+Quando aplicável, escreva uma mensagem personalizada que poderá ser usada para enviar ao WhatsApp do estabelecimento, oferecendo o serviço de consultoria e atualização dos dados no Google Meu Negócio. Escreva uma mensagem com alto potencial de venda, que seja concisa, mas amigável, e aponte as melhorias mais importantes que podem ser feitas, baseada na análise. Informar que o processo de atualização no Google leva menos de 5 minutos, e o valor do serviço é muito barato, apenas R$ 50,00.
+
+Fotografia profissional não está incluso nos meus serviços, mas sim a atualização das fotos do estabelecimento no Google Meu Negócio. Deixe claro que, quanto a isso, caso o estabelecimento se enquadre nesta necessidade, a atualização das fotos exige que o cliente tenha as novas fotos para utilização.
 
 **RETORNE APENAS UM JSON ESTRITAMENTE VÁLIDO, SEM TEXTO ADICIONAL. CERTIFIQUE-SE DE QUE SUA RESPOSTA SEJA UM OBJETO JSON VÁLIDO, COM CHAVES E VALORES ENTRE ASPAS DUPLAS, E QUE NÃO HAJA VÍRGULAS SOLTAS APÓS O ÚLTIMO ELEMENTO DE UM ARRAY OU OBJETO.**
 
@@ -691,11 +746,13 @@ Quando aplicável, escreva uma mensagem personalizada que poderá ser usada para
 
 Sua resposta DEVE seguir o seguinte formato:
 
+\`\`\`json
 {
   "score": number,
   "feedback": string[] | null,
   "consultingMessage": string | null
 }
+\`\`\`
 `;
   }
 }
@@ -786,6 +843,13 @@ class PlacesSearchApp {
           radius,
           nextPageToken
         );
+
+      fs.writeFileSync(
+        `./placesNearbyResult_${
+          nextPageToken ? nextPageToken.slice(0, 10) : "1"
+        }.json`,
+        JSON.stringify(placesNearbyResult, null, 2)
+      );
 
       console.log(
         `Estabelecimentos encontrados: ${placesNearbyResult.results.length}`

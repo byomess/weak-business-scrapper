@@ -270,7 +270,7 @@ interface AddressAnalysisResult {
 class InformationQualityAnalyzer {
   private static readonly GOOGLE_AI_STUDIO_API_KEY: string | undefined =
     process.env.GOOGLE_AI_STUDIO_API_KEY;
-  private static readonly MODEL_NAME: string = "gemini-1.5-pro-001";
+  private static readonly MODEL_NAME: string = "gemini-1.5-pro";
   private static readonly API_ENDPOINT: string = `https://generativelanguage.googleapis.com/v1beta/models/${this.MODEL_NAME}:generateContent?key=${this.GOOGLE_AI_STUDIO_API_KEY}`;
 
   /**
@@ -990,7 +990,7 @@ class AIPlaceScoreCalculator implements PlaceScoreCalculator {
       \`\`\`json
       {
         "score": number,
-        "feedback": [string, ...] | null,
+        "feedback": string[] | null,
         "consultingMessage": string | null
       }
       \`\`\`

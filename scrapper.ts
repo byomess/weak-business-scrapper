@@ -237,7 +237,8 @@ interface PlaceDetailsResult {
 
 interface OverallAnalysisResult {
   score: number;
-  feedback: string[];
+  feedback: string[] | null;
+  consultingMessage: string | null;
 }
 
 interface AddressAnalysisResult {
@@ -651,7 +652,7 @@ class FileUtils {
       if (place._OVERALL_ANALYSIS_RESULT) {
         markdown += `- **Análise Geral:**\n`;
         markdown += `  - **Pontuação:** ${place._OVERALL_ANALYSIS_RESULT.score}\n`;
-        markdown += `  - **Feedback:** \n    * ${place._OVERALL_ANALYSIS_RESULT.feedback.join(
+        markdown += `  - **Feedback:** \n    * ${place._OVERALL_ANALYSIS_RESULT.feedback?.join(
           "\n    * "
         )}\n`;
       } else {
@@ -730,6 +731,7 @@ class OptimizedPlaceScoreCalculator implements PlaceScoreCalculator {
     return Promise.resolve({
       score,
       feedback: [], // No feedback is provided here.
+      consultingMessage: ""
     });
   }
 
@@ -806,6 +808,7 @@ class DefaultPlaceScoreCalculator implements PlaceScoreCalculator {
       resolve({
         score: result,
         feedback: [],
+        consultingMessage: ""
       })
     );
   }
@@ -915,6 +918,7 @@ class AIPlaceScoreCalculator implements PlaceScoreCalculator {
       return {
         score: parsedResponse.score,
         feedback: parsedResponse.feedback,
+        consultingMessage: parsedResponse.consultingMessage || ""
       };
     }
 
@@ -975,6 +979,8 @@ class AIPlaceScoreCalculator implements PlaceScoreCalculator {
   
       Não crie feedbacks que não tenham como base dados disponíveis do JSON fornecido acima, ou seja, não faça presunções.
 
+      Quando aplicável, escreva uma mensagem personalizada que poderá ser usada para enviar ao WhatsApp do estabelecimento, oferecendo o serviço de consultoria e atualização dos dados no Google Meu Negócio. Escreva uma mensagem com alto potencial de venda, que seja conciso e aponte as melhorias mais importantes que pode ser feito, baseada na análise.
+
       **RETORNE UM JSON ESTRITAMENTE VÁLIDO, SEM TEXTO ADICIONAL. CERTIFIQUE-SE DE QUE SUA RESPOSTA SEJA UM OBJETO JSON VÁLIDO, COM CHAVES E VALORES ENTRE ASPAS DUPLAS, E QUE NÃO HAJA VÍRGULAS SOLTAS APÓS O ÚLTIMO ELEMENTO DE UM ARRAY OU OBJETO.**
   
       **DENTRO DO JSON, ESCAPE CORRETAMENTE QUAISQUER CARACTERES ESPECIAIS, INCLUINDO QUEBRAS DE LINHA (\\n) E ASPAS DUPLAS (\"). NÃO INCLUA CARACTERES DE CONTROLE.**
@@ -983,8 +989,9 @@ class AIPlaceScoreCalculator implements PlaceScoreCalculator {
   
       \`\`\`json
       {
-        "score": <score>,
-        "feedback": [<feedback>, ...] | null
+        "score": number,
+        "feedback": [string, ...] | null,
+        "consultingMessage": string | null
       }
       \`\`\`
       `;

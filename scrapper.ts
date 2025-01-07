@@ -789,6 +789,8 @@ class AIPlaceScoreCalculator implements PlaceScoreCalculator {
   *   **Incentivar o cliente a entrar em contato para saber mais sobre os serviços e valores, criando um senso de urgência, exclusividade e atendimento personalizado.**
   *   **A mensagem pode ser customizada de acordo com o tipo de estabelecimento ou necessidades específicas, não precisando seguir à risca o exemplo acima, mas deve sempre seguir a mesma ideia do exemplo**.
   
+  **A natureza da linguagem usada na mensagem, que pode ser desde a mais casual até mais formal, e a liberdade no uso de emojis, deve estar de acordo com o tipo do negócio alvo. Use a melhor abordagem para cada tipo de negócio!
+
   **RETORNE APENAS UM JSON ESTRITAMENTE VÁLIDO, SEM TEXTO ADICIONAL, NO SEGUINTE FORMATO:**
   
   \`\`\`json

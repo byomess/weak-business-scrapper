@@ -778,12 +778,11 @@ class AIPlaceScoreCalculator implements PlaceScoreCalculator {
   
   **A mensagem deve usar como base o seguinte exemplo de roteiro, e incluir as seguintes informações, SEMPRE que houver pontos de melhoria identificados:**
   
-  *   **Quantidade de Pontos de Melhoria:** "Identificamos X pontos no cadastro do seu estabelecimento no Google Meu Negócio que pode estar fazendo você perder clientes, mas podemos te ajudar."
-  *   **Oferta de Atualização Automática:** "Oferecemos um serviço de atualização automática do cadastro do seu estabelecimento, que leva apenas 5 minutos. Num piscar de olhos, todos os gargalos que encontramos no cadastro do seu negócio vão ser resolvidos!
-  *   **Oferta de Relatório:** "...Ou então, podemos te oferecer um relatório detalhado desses pontos, além das informações já otimizadas para atualização, para que você possa maximizar o nível de atratividade, profissionalismo e confiabilidade do seu negócio, atraindo muito mais clientes."
-  *   **Se aplicável, oferecer outros serviços relevantes, baseado nos feedbacks e nas condições dos serviços.**
-  *   **Call To Action:**: "Caso esteja interessado na consultoria e queira saber mais, basta responder esta mensagem."
-  *   **Despedida Amigável:** "Estamos ansiosos para poder ajudar o seu negócio a ter seu máximo potencial online! 🙂"
+  *   **Quantidade de Pontos de Melhoria:** Exemplo: "Identificamos X pontos no cadastro do seu estabelecimento no Google Meu Negócio que pode estar fazendo você perder clientes, mas podemos te ajudar."
+  *   **Oferta de Atualização Automática:** Exemplo: "Oferecemos um serviço de atualização automática do cadastro do seu estabelecimento, que leva apenas 5 minutos. Num piscar de olhos, todos os gargalos que encontramos no cadastro do seu negócio vão ser resolvidos!
+  *   **Oferta de Relatório:** Exemplo: "...Ou então, podemos te oferecer um relatório detalhado desses pontos, além das informações já otimizadas para atualização, para que você possa maximizar o nível de atratividade, profissionalismo e confiabilidade do seu negócio, atraindo muito mais clientes."
+  *   **Oferta de Serviços secundários**: Se aplicável, oferecer outros serviços relevantes, baseado nos dados disponibilizados, feedbacks gerados, e nas características e necessidades específicas do estabelecimento."
+  *   **Call To Action:** Usar uma de impacto para causar desejo de responder a mensagem por parte do estabelecimento, para poder tirar dúvidas, prosseguir com o atendimento e desejavelmente fechar a venda do serviço.
   
   **A mensagem acima é apenas um sugestão, podendo ser livremente customizada, mas a mensagem deve:**
   

@@ -5,658 +5,289 @@
       "business_status": "OPERATIONAL",
       "geometry": {
         "location": {
-          "lat": -22.7067298,
-          "lng": -46.9859685
+          "lat": -22.7040323,
+          "lng": -46.9898282
         },
         "viewport": {
           "northeast": {
-            "lat": -22.70544237010728,
-            "lng": -46.98459022010728
+            "lat": -22.70265287010727,
+            "lng": -46.98839162010728
           },
           "southwest": {
-            "lat": -22.70814202989272,
-            "lng": -46.98728987989272
+            "lat": -22.70535252989272,
+            "lng": -46.99109127989272
           }
         }
       },
-      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/pharmacy-71.png",
-      "icon_background_color": "#F88181",
-      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/pharmacy_pinlet",
-      "name": "Super Popular",
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/gas_station-71.png",
+      "icon_background_color": "#909CE1",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/gas_pinlet",
+      "name": "Posto Petrobras",
       "opening_hours": {
         "open_now": true
       },
       "photos": [
         {
-          "height": 576,
+          "height": 720,
           "html_attributions": [
-            "<a href=\"https://maps.google.com/maps/contrib/111345913974030586201\">A Google User</a>"
+            "<a href=\"https://maps.google.com/maps/contrib/113699766414819780753\">Posto Galeria de Jaguariuna</a>"
           ],
-          "photo_reference": "AWYs27zxYuitkB1YQ4w4xGSGVqklL3yaISYw82WtBAQ7yMRVrWWoKNhH1OYKrIrOD1UBnV6tszTxHBBYzZspINEIC7eXCGRYPBOk4-aETTeJZeVsPrblAmbesiUuXZLSo-1vdUv7QwrQTQnQScWEELuLFVFPjakZvR0BjClnvvXCAHCSVQxO",
-          "width": 1027
+          "photo_reference": "AWYs27xOQ1X_JlTZt8Rn_woklMzP14x241OVF4-S2IAn7_KzNX9rNX7euBA68ifhXImpPLOuh-5X_zS5aGZlMp4GAL8DwluLEVIEMkFF4JD9jAbPDnWbGMPckiF0tcOrLGOUcXv-N38rF7PUOhtiT4efOT_3OwYJyPJQrHTv9yoJscnBPV8k",
+          "width": 1280
         }
       ],
-      "place_id": "ChIJazpxzYi_yJQR3YimYmqfR_Y",
+      "place_id": "ChIJWXlVigToyJQRfFs-cgqHzfg",
       "plus_code": {
-        "compound_code": "72V7+8J Centro, Jaguariúna - State of São Paulo",
-        "global_code": "589M72V7+8J"
-      },
-      "rating": 5,
-      "reference": "ChIJazpxzYi_yJQR3YimYmqfR_Y",
-      "scope": "GOOGLE",
-      "types": [
-        "pharmacy",
-        "drugstore",
-        "health",
-        "point_of_interest",
-        "store",
-        "establishment"
-      ],
-      "user_ratings_total": 191,
-      "vicinity": "R. Cândido Bueno, 909 - Centro, Jaguariúna"
-    },
-    {
-      "business_status": "OPERATIONAL",
-      "geometry": {
-        "location": {
-          "lat": -22.7056684,
-          "lng": -46.9905052
-        },
-        "viewport": {
-          "northeast": {
-            "lat": -22.70431762010728,
-            "lng": -46.98919982010727
-          },
-          "southwest": {
-            "lat": -22.70701727989272,
-            "lng": -46.99189947989272
-          }
-        }
-      },
-      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/pharmacy-71.png",
-      "icon_background_color": "#F88181",
-      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/pharmacy_pinlet",
-      "name": "Drogasil",
-      "opening_hours": {
-        "open_now": true
-      },
-      "photos": [
-        {
-          "height": 4032,
-          "html_attributions": [
-            "<a href=\"https://maps.google.com/maps/contrib/115651519407915147036\">115651519407915147036</a>"
-          ],
-          "photo_reference": "AWYs27w-tqg_MSiXv39XF9bpGL8PcBFxvOF0is10wJTLm7VcIfiI7K0UVK8C5_w-x-kU3HovDSMBpL99uqLKzsJSoUPFqSQYteZI4fDOebCyGO8merC2O1wkkzULyoeMoQIGMRJ82Lx3X9t93kcELXO3nSirxXbbiuwch8m_J6xWM6-Ln50W",
-          "width": 2268
-        }
-      ],
-      "place_id": "ChIJSSYhpQToyJQRK5Uj_ERhXng",
-      "plus_code": {
-        "compound_code": "72V5+PQ Jardim Berlim, Jaguariúna - State of São Paulo",
-        "global_code": "589M72V5+PQ"
-      },
-      "rating": 3.5,
-      "reference": "ChIJSSYhpQToyJQRK5Uj_ERhXng",
-      "scope": "GOOGLE",
-      "types": [
-        "pharmacy",
-        "health",
-        "point_of_interest",
-        "store",
-        "establishment"
-      ],
-      "user_ratings_total": 122,
-      "vicinity": "R. Maria Ângela, 390 - Loja 1, 2, 3, 4 e 6 - Jardim Berlim, Jaguariúna"
-    },
-    {
-      "business_status": "OPERATIONAL",
-      "geometry": {
-        "location": {
-          "lat": -22.7070116,
-          "lng": -46.9846629
-        },
-        "viewport": {
-          "northeast": {
-            "lat": -22.70573507010728,
-            "lng": -46.98328017010728
-          },
-          "southwest": {
-            "lat": -22.70843472989272,
-            "lng": -46.98597982989272
-          }
-        }
-      },
-      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/pharmacy-71.png",
-      "icon_background_color": "#F88181",
-      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/pharmacy_pinlet",
-      "name": "Farmácia Farma Flora Jaguariúna",
-      "opening_hours": {
-        "open_now": true
-      },
-      "photos": [
-        {
-          "height": 3000,
-          "html_attributions": [
-            "<a href=\"https://maps.google.com/maps/contrib/107086796059032644527\">A Google User</a>"
-          ],
-          "photo_reference": "AWYs27xiLLqoWuzJP_Fp77HN4jiexHDgC82E8NQFu3oATgogr_8SC6wQj7rZcoKFffF9TREHOnWGZ-IluLxX-l03i4E4fLMay54JJAOCySYJdb23d-HuZnI9Ql16lgK8UOCAopttjVkCWXzhmz8DU6yviTOIFin3Rn8_CwUsgGXmg5Jo-8bl",
-          "width": 4000
-        }
-      ],
-      "place_id": "ChIJg6PbtQboyJQRrOrZ0_NYOr0",
-      "plus_code": {
-        "compound_code": "72V8+54 Centro, Jaguariúna - State of São Paulo",
-        "global_code": "589M72V8+54"
-      },
-      "rating": 4.8,
-      "reference": "ChIJg6PbtQboyJQRrOrZ0_NYOr0",
-      "scope": "GOOGLE",
-      "types": [
-        "pharmacy",
-        "drugstore",
-        "health",
-        "point_of_interest",
-        "store",
-        "establishment"
-      ],
-      "user_ratings_total": 11,
-      "vicinity": "R. Alfredo Engler, 329 - Centro, Jaguariúna"
-    },
-    {
-      "business_status": "OPERATIONAL",
-      "geometry": {
-        "location": {
-          "lat": -22.7074928,
-          "lng": -46.9874649
-        },
-        "viewport": {
-          "northeast": {
-            "lat": -22.70610462010728,
-            "lng": -46.98613292010727
-          },
-          "southwest": {
-            "lat": -22.70880427989272,
-            "lng": -46.98883257989272
-          }
-        }
-      },
-      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/pharmacy-71.png",
-      "icon_background_color": "#F88181",
-      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/pharmacy_pinlet",
-      "name": "Farmácia Drogal",
-      "opening_hours": {
-        "open_now": true
-      },
-      "photos": [
-        {
-          "height": 576,
-          "html_attributions": [
-            "<a href=\"https://maps.google.com/maps/contrib/108917724918869017903\">A Google User</a>"
-          ],
-          "photo_reference": "AWYs27wqwE4neC7KRtCx5DG6Qqyybds17GpAqjgyJq2owv9283YjodjKBUrOyszhZXzss79YBXJRhhdWqzKjCjDDtf663jXUI5gbrpoclBMz7RCiwTX38pxOs4aZs-Lun8zxk9ITw3kkqV5SBhSYIONAl5bBsKvPuMojE2aQlQc0saE-YBVE",
-          "width": 1027
-        }
-      ],
-      "place_id": "ChIJH_qjkFvpyJQRgqjpws1QpQ4",
-      "plus_code": {
-        "compound_code": "72V7+22 Centro, Jaguariúna - State of São Paulo",
-        "global_code": "589M72V7+22"
-      },
-      "rating": 4.6,
-      "reference": "ChIJH_qjkFvpyJQRgqjpws1QpQ4",
-      "scope": "GOOGLE",
-      "types": [
-        "pharmacy",
-        "drugstore",
-        "health",
-        "point_of_interest",
-        "store",
-        "establishment"
-      ],
-      "user_ratings_total": 29,
-      "vicinity": "R. Cândido Bueno, 754 - Centro, Jaguariúna"
-    },
-    {
-      "business_status": "OPERATIONAL",
-      "geometry": {
-        "location": {
-          "lat": -22.7065331,
-          "lng": -46.9849095
-        },
-        "viewport": {
-          "northeast": {
-            "lat": -22.70516112010728,
-            "lng": -46.98356527010728
-          },
-          "southwest": {
-            "lat": -22.70786077989272,
-            "lng": -46.98626492989272
-          }
-        }
-      },
-      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/pharmacy-71.png",
-      "icon_background_color": "#F88181",
-      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/pharmacy_pinlet",
-      "name": "Drogaria Total - São Luiz",
-      "opening_hours": {
-        "open_now": true
-      },
-      "photos": [
-        {
-          "height": 900,
-          "html_attributions": [
-            "<a href=\"https://maps.google.com/maps/contrib/112053941841502614281\">A Google User</a>"
-          ],
-          "photo_reference": "AWYs27xOB-GFWbygXeoU-a86BQ6FrWDL-ZKOyHWDQx1v2pWGpqaJMH10TKprEpHilPZAoqie9caC3sRzDmTq4TRdwEqNlUDM3QA9aL6vUjWzgyFObaBxUjr0AoXyvuAgBWEWt9PH8iz6HehQCFTRBciaPXwW0sB-Js_Gtpso04pFsiYd6ei-",
-          "width": 1600
-        }
-      ],
-      "place_id": "ChIJ94LxQaHpyJQRWe-su5qGZog",
-      "plus_code": {
-        "compound_code": "72V8+92 Centro, Jaguariúna - State of São Paulo",
-        "global_code": "589M72V8+92"
-      },
-      "rating": 4.8,
-      "reference": "ChIJ94LxQaHpyJQRWe-su5qGZog",
-      "scope": "GOOGLE",
-      "types": [
-        "pharmacy",
-        "health",
-        "point_of_interest",
-        "store",
-        "establishment"
-      ],
-      "user_ratings_total": 13,
-      "vicinity": "R. Cândido Bueno, 1026 - Centro, Jaguariúna"
-    },
-    {
-      "business_status": "OPERATIONAL",
-      "geometry": {
-        "location": {
-          "lat": -22.703973,
-          "lng": -46.984871
-        },
-        "viewport": {
-          "northeast": {
-            "lat": -22.70264277010728,
-            "lng": -46.98357597010728
-          },
-          "southwest": {
-            "lat": -22.70534242989272,
-            "lng": -46.98627562989272
-          }
-        }
-      },
-      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/pharmacy-71.png",
-      "icon_background_color": "#F88181",
-      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/pharmacy_pinlet",
-      "name": "Formulare Farmácia de Manipulação",
-      "opening_hours": {
-        "open_now": true
-      },
-      "photos": [
-        {
-          "height": 1800,
-          "html_attributions": [
-            "<a href=\"https://maps.google.com/maps/contrib/117556626596361131708\">Cesar Meneses</a>"
-          ],
-          "photo_reference": "AWYs27zfkr0ROW8AjJzHKvozhHuHpl6v41UmBsFCAfimZcDidCcX6WEPznFLbNjSbxj7ghv5qlRZC37voOCkwsKkE75HoraUYC5iHTZh--VhAwvfxAvB5ghneWe39oiDgfIoHBuGxO0r3dccPpurogi8k12DyrFEGOMDRyVeqkWVW5IaiZFK",
-          "width": 3582
-        }
-      ],
-      "place_id": "ChIJJ2IOcwboyJQR0gDOZ_F81_g",
-      "plus_code": {
-        "compound_code": "72W8+C3 Centro, Jaguariúna - State of São Paulo",
-        "global_code": "589M72W8+C3"
+        "compound_code": "72W6+93 Centro, Jaguariúna - State of São Paulo",
+        "global_code": "589M72W6+93"
       },
       "rating": 4.4,
-      "reference": "ChIJJ2IOcwboyJQR0gDOZ_F81_g",
+      "reference": "ChIJWXlVigToyJQRfFs-cgqHzfg",
       "scope": "GOOGLE",
       "types": [
-        "pharmacy",
-        "drugstore",
-        "health",
-        "point_of_interest",
+        "gas_station",
+        "convenience_store",
+        "car_wash",
+        "car_repair",
         "store",
+        "restaurant",
         "food",
-        "establishment"
-      ],
-      "user_ratings_total": 16,
-      "vicinity": "R. José Alves Guedes, 528 - Centro, Jaguariúna"
-    },
-    {
-      "business_status": "OPERATIONAL",
-      "geometry": {
-        "location": {
-          "lat": -22.7072512,
-          "lng": -46.9875771
-        },
-        "viewport": {
-          "northeast": {
-            "lat": -22.70597057010728,
-            "lng": -46.98619502010728
-          },
-          "southwest": {
-            "lat": -22.70867022989272,
-            "lng": -46.98889467989272
-          }
-        }
-      },
-      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
-      "icon_background_color": "#4B96F3",
-      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
-      "name": "Drogaria Familiar",
-      "opening_hours": {
-        "open_now": true
-      },
-      "place_id": "ChIJrWsVigToyJQRmPsrvA1JJss",
-      "plus_code": {
-        "compound_code": "72V6+4X Centro, Jaguariúna - State of São Paulo",
-        "global_code": "589M72V6+4X"
-      },
-      "rating": 4.9,
-      "reference": "ChIJrWsVigToyJQRmPsrvA1JJss",
-      "scope": "GOOGLE",
-      "types": [
-        "drugstore",
-        "health",
         "point_of_interest",
-        "store",
         "establishment"
       ],
-      "user_ratings_total": 9,
-      "vicinity": "R. Cândido Bueno, 731 - Centro, Jaguariúna"
+      "user_ratings_total": 283,
+      "vicinity": "R. Egas Bueno, 443 - Centro, Jaguariúna"
     },
     {
       "business_status": "OPERATIONAL",
       "geometry": {
         "location": {
-          "lat": -22.7050655,
-          "lng": -46.9947552
+          "lat": -22.7056647,
+          "lng": -46.98981020000001
         },
         "viewport": {
           "northeast": {
-            "lat": -22.70373737010728,
-            "lng": -46.99341487010728
+            "lat": -22.70423662010728,
+            "lng": -46.98841397010727
           },
           "southwest": {
-            "lat": -22.70643702989272,
-            "lng": -46.99611452989272
+            "lat": -22.70693627989272,
+            "lng": -46.99111362989272
           }
         }
       },
-      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
-      "icon_background_color": "#4B96F3",
-      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
-      "name": "Farmácia de Homeopatia e Manipulação Folium Et Vitae",
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/gas_station-71.png",
+      "icon_background_color": "#909CE1",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/gas_pinlet",
+      "name": "Auto Posto Ferrari Jaguariúna Posto Shell - Rede Ampapetro",
       "opening_hours": {
         "open_now": true
       },
       "photos": [
         {
-          "height": 3024,
+          "height": 2268,
           "html_attributions": [
-            "<a href=\"https://maps.google.com/maps/contrib/118272668782431203929\">Isack Ryuji Minowa</a>"
+            "<a href=\"https://maps.google.com/maps/contrib/103158479349062341473\">Mario Ishikawa</a>"
           ],
-          "photo_reference": "AWYs27xq8Bv_cNIDOllEN2-uiaiUekh_SuIFTXejAZHKpW4x39ezYkIyiAEQic9ENM82SwlAQhAZ-6fAxfjRMvuvo_VbRiy2lJzVTOr6UVHLNQe5jX9aMfnGz0xFuOzJY33NjMWocyC_rTQn6O22aq9xP-urnwLtsw1u_idog7Lntnmb1cRf",
+          "photo_reference": "AWYs27w7jsSp5BCW9jDIqdNqawJILWjXCNWS5sFrgaABuADXRTJpg6-uNTq48YaW5bwRUiwklZvt4s20Yv6ZotilLumUO2UoERN8e7WO8D_s5bVzLHXacNeX7w6QngRmOQK-qjw2rO_WMLGVvauJv_dff8GmHnzzR7P4FXR9dT84UER0l0T5",
           "width": 4032
         }
       ],
-      "place_id": "ChIJ_5EHNhfoyJQRJ0cGDnblYY8",
+      "place_id": "ChIJ9zjpNgXoyJQRWPk7jBikZ6o",
       "plus_code": {
-        "compound_code": "72W4+24 Jardim Santa Cruz, Jaguariúna - State of São Paulo",
-        "global_code": "589M72W4+24"
+        "compound_code": "72V6+P3 Novo Jaguari, Jaguariúna - State of São Paulo",
+        "global_code": "589M72V6+P3"
       },
-      "rating": 4.7,
-      "reference": "ChIJ_5EHNhfoyJQRJ0cGDnblYY8",
+      "price_level": 2,
+      "rating": 4.3,
+      "reference": "ChIJ9zjpNgXoyJQRWPk7jBikZ6o",
       "scope": "GOOGLE",
       "types": [
-        "drugstore",
-        "pharmacy",
-        "health",
+        "gas_station",
         "point_of_interest",
-        "store",
         "establishment"
       ],
-      "user_ratings_total": 23,
-      "vicinity": "0. via whatsapp - R. Portugal, 56 19 - 99826,2764, 00 - Jardim Santa Cruz, Jaguariúna"
+      "user_ratings_total": 240,
+      "vicinity": "R. Maria Ângela, 747 - Novo Jaguari, Jaguariúna"
     },
     {
       "business_status": "OPERATIONAL",
       "geometry": {
         "location": {
-          "lat": -22.7050554,
-          "lng": -46.9810037
+          "lat": -22.7060293,
+          "lng": -46.9842516
         },
         "viewport": {
           "northeast": {
-            "lat": -22.70387262010728,
-            "lng": -46.97950547010728
+            "lat": -22.70467012010728,
+            "lng": -46.98287482010727
           },
           "southwest": {
-            "lat": -22.70657227989272,
-            "lng": -46.98220512989272
+            "lat": -22.70736977989272,
+            "lng": -46.98557447989272
           }
         }
       },
-      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/pharmacy-71.png",
-      "icon_background_color": "#F88181",
-      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/pharmacy_pinlet",
-      "name": "Nutrivet Veterinary Pharmacy",
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/gas_station-71.png",
+      "icon_background_color": "#909CE1",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/gas_pinlet",
+      "name": "Assis",
       "opening_hours": {
         "open_now": true
       },
       "photos": [
         {
-          "height": 938,
+          "height": 2160,
           "html_attributions": [
-            "<a href=\"https://maps.google.com/maps/contrib/104132537851438195285\">A Google User</a>"
+            "<a href=\"https://maps.google.com/maps/contrib/102832854101339538187\">Robson Ivan</a>"
           ],
-          "photo_reference": "AWYs27yG4MfEvZCPGzsy3YiRAyrRONg0LRbphLcdqMEigySpXhnlmEpfSdBGfgjUvfkNwjFWUk-ISr7g-j1_djvw4htSMyg9nn6H3F_5K-v2B9y1ebgS8BJYDrc1kJmWDkpcdMFDHq12FDGGZ3UkZTcj8YvugefxHm1j3SyA9vYqt5RuJO-g",
-          "width": 1258
+          "photo_reference": "AWYs27yZvaG5QJaZY6G6MJ17DTOdqcZNoXYVyDqSrAMIs15RCfrpYRJLeKK3vGb2J0lPOFLaJCp7G1ajn1b26bSxybVs7Bl-gLOLSk35gl2FTkJ98X24bnUmkG6ud2iQ_dHQ_kzndXolb2x0pgAdwiUD__0sgKXwUXSSUDDfF6Fg82Al-Twg",
+          "width": 3840
         }
       ],
-      "place_id": "ChIJ_8N0IxvoyJQR-Juzlg28wwY",
+      "place_id": "ChIJm-m-vwboyJQRh8xY6LX1PKk",
       "plus_code": {
-        "compound_code": "72V9+XH Centro, Jaguariúna - State of São Paulo",
-        "global_code": "589M72V9+XH"
-      },
-      "rating": 4.7,
-      "reference": "ChIJ_8N0IxvoyJQR-Juzlg28wwY",
-      "scope": "GOOGLE",
-      "types": [
-        "veterinary_care",
-        "pharmacy",
-        "health",
-        "point_of_interest",
-        "store",
-        "establishment"
-      ],
-      "user_ratings_total": 972,
-      "vicinity": "R. Cândido Bueno, 1441 - Centro, Jaguariúna"
-    },
-    {
-      "business_status": "OPERATIONAL",
-      "geometry": {
-        "location": {
-          "lat": -22.7045844,
-          "lng": -46.9899476
-        },
-        "viewport": {
-          "northeast": {
-            "lat": -22.70322577010728,
-            "lng": -46.98864782010728
-          },
-          "southwest": {
-            "lat": -22.70592542989272,
-            "lng": -46.99134747989272
-          }
-        }
-      },
-      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
-      "icon_background_color": "#4B96F3",
-      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
-      "name": "Drogaria Colframon",
-      "opening_hours": {
-        "open_now": true
-      },
-      "place_id": "ChIJr-taVAXoyJQRPFXg0CjbUOI",
-      "plus_code": {
-        "compound_code": "72W6+52 Centro, Jaguariúna - State of São Paulo",
-        "global_code": "589M72W6+52"
-      },
-      "rating": 0,
-      "reference": "ChIJr-taVAXoyJQRPFXg0CjbUOI",
-      "scope": "GOOGLE",
-      "types": [
-        "drugstore",
-        "pharmacy",
-        "health",
-        "point_of_interest",
-        "store",
-        "establishment"
-      ],
-      "user_ratings_total": 0,
-      "vicinity": "R. Amapá, 44 - Centro, Jaguariúna"
-    },
-    {
-      "business_status": "OPERATIONAL",
-      "geometry": {
-        "location": {
-          "lat": -22.7065041,
-          "lng": -46.9848436
-        },
-        "viewport": {
-          "northeast": {
-            "lat": -22.70514557010727,
-            "lng": -46.98349882010728
-          },
-          "southwest": {
-            "lat": -22.70784522989272,
-            "lng": -46.98619847989272
-          }
-        }
-      },
-      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
-      "icon_background_color": "#4B96F3",
-      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
-      "name": "Alau Manetta Manetta",
-      "opening_hours": {
-        "open_now": true
-      },
-      "place_id": "ChIJM-SToAboyJQRiopslQ_zrjk",
-      "plus_code": {
-        "compound_code": "72V8+93 Centro, Jaguariúna - State of São Paulo",
-        "global_code": "589M72V8+93"
+        "compound_code": "72V8+H7 Jaguariúna, State of São Paulo",
+        "global_code": "589M72V8+H7"
       },
       "rating": 5,
-      "reference": "ChIJM-SToAboyJQRiopslQ_zrjk",
+      "reference": "ChIJm-m-vwboyJQRh8xY6LX1PKk",
       "scope": "GOOGLE",
       "types": [
-        "drugstore",
-        "pharmacy",
-        "health",
+        "gas_station",
         "point_of_interest",
-        "store",
         "establishment"
       ],
       "user_ratings_total": 1,
-      "vicinity": "R. Cândido Bueno, 1026 - Centro, Jaguariúna"
+      "vicinity": "Centro, Jaguariúna"
     },
     {
       "business_status": "OPERATIONAL",
       "geometry": {
         "location": {
-          "lat": -22.7059144,
-          "lng": -46.99040129999999
+          "lat": -22.705651,
+          "lng": -46.98984799999999
         },
         "viewport": {
           "northeast": {
-            "lat": -22.70459072010728,
-            "lng": -46.98910887010728
+            "lat": -22.70421902010727,
+            "lng": -46.98845727010728
           },
           "southwest": {
-            "lat": -22.70729037989272,
-            "lng": -46.99180852989272
+            "lat": -22.70691867989272,
+            "lng": -46.99115692989272
           }
         }
       },
-      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/shopping-71.png",
-      "icon_background_color": "#4B96F3",
-      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/shopping_pinlet",
-      "name": "PetCamp",
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/gas_station-71.png",
+      "icon_background_color": "#909CE1",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/gas_pinlet",
+      "name": "Shell",
+      "place_id": "ChIJKdP0NgXoyJQRCaCmNOT_o04",
+      "plus_code": {
+        "compound_code": "72V6+P3 Novo Jaguari, Jaguariúna - State of São Paulo",
+        "global_code": "589M72V6+P3"
+      },
+      "rating": 0,
+      "reference": "ChIJKdP0NgXoyJQRCaCmNOT_o04",
+      "scope": "GOOGLE",
+      "types": [
+        "gas_station",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 0,
+      "vicinity": "R. Maria Ângela, 747 - Novo Jaguari, Jaguariúna"
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": -22.70424,
+          "lng": -46.9897608
+        },
+        "viewport": {
+          "northeast": {
+            "lat": -22.70283792010727,
+            "lng": -46.98843182010728
+          },
+          "southwest": {
+            "lat": -22.70553757989272,
+            "lng": -46.99113147989272
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/gas_station-71.png",
+      "icon_background_color": "#909CE1",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/gas_pinlet",
+      "name": "Br",
+      "opening_hours": {},
+      "place_id": "ChIJN1B8-A_oyJQRy3r6CevE9-4",
+      "plus_code": {
+        "compound_code": "72W6+83 Centro, Jaguariúna - State of São Paulo",
+        "global_code": "589M72W6+83"
+      },
+      "rating": 4,
+      "reference": "ChIJN1B8-A_oyJQRy3r6CevE9-4",
+      "scope": "GOOGLE",
+      "types": [
+        "gas_station",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 3,
+      "vicinity": "Centro, Jaguariúna"
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": -22.706099,
+          "lng": -46.9843232
+        },
+        "viewport": {
+          "northeast": {
+            "lat": -22.70479837010727,
+            "lng": -46.98295212010729
+          },
+          "southwest": {
+            "lat": -22.70749802989272,
+            "lng": -46.98565177989273
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/gas_station-71.png",
+      "icon_background_color": "#909CE1",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/gas_pinlet",
+      "name": "Auto Posto Cred Campo Limpo Paulista",
       "opening_hours": {
         "open_now": true
       },
       "photos": [
         {
-          "height": 1403,
+          "height": 3120,
           "html_attributions": [
-            "<a href=\"https://maps.google.com/maps/contrib/100867810804722882114\">Leandra Ferreira</a>"
+            "<a href=\"https://maps.google.com/maps/contrib/102832854101339538187\">Robson Ivan</a>"
           ],
-          "photo_reference": "AWYs27xuoqHyM1ShYpwp8ZihLh-MsehYjfDV7awVs1N71WsI2QNdGXMYSX64mCPsveJVUreOYNe0v6koPmhVq1Nqh7TF3N5aR3fTO9lUr7HkEsETyBSP_UDeinpM-tmDNpq47W3ghZB83M8Ilx_NsUWY66J_uNsRRTajwNyNGf7w-bljP2vD",
-          "width": 720
+          "photo_reference": "AWYs27yrJUV0qFXzyD7EZcT12ENO7XSOyBOXksIM-O477y6ZHBlVbFp9CGNOQ3W7m4agxRC9IyPwq3bNfsy_f41npSyXjei3KoJjNz-zUdG5bF7g3IGMmWUup9hKHY0DxT52EEknJZwGLk_ioHfbbVrcXlv39SDmnztg7NwXISYsFWuyRoJU",
+          "width": 4160
         }
       ],
-      "place_id": "ChIJdcgVbHDpyJQR7FYjs8uNJCM",
+      "place_id": "ChIJEf6Y3gboyJQRamxSBaAE-9E",
       "plus_code": {
-        "compound_code": "72V5+JR Novo Jaguari, Jaguariúna - State of São Paulo",
-        "global_code": "589M72V5+JR"
+        "compound_code": "72V8+H7 Centro, Jaguariúna - State of São Paulo",
+        "global_code": "589M72V8+H7"
       },
-      "rating": 4.6,
-      "reference": "ChIJdcgVbHDpyJQR7FYjs8uNJCM",
+      "rating": 4.3,
+      "reference": "ChIJEf6Y3gboyJQRamxSBaAE-9E",
       "scope": "GOOGLE",
       "types": [
-        "pet_store",
+        "gas_station",
         "point_of_interest",
-        "store",
         "establishment"
       ],
-      "user_ratings_total": 456,
-      "vicinity": "R. Maria Ângela, 390 - Novo Jaguari, Jaguariúna"
-    },
-    {
-      "business_status": "OPERATIONAL",
-      "geometry": {
-        "location": {
-          "lat": -22.7073679,
-          "lng": -46.9855629
-        },
-        "viewport": {
-          "northeast": {
-            "lat": -22.70603242010728,
-            "lng": -46.98420702010728
-          },
-          "southwest": {
-            "lat": -22.70873207989272,
-            "lng": -46.98690667989273
-          }
-        }
-      },
-      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/pharmacy-71.png",
-      "icon_background_color": "#F88181",
-      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/pharmacy_pinlet",
-      "name": "Farmácia De Alto Custo de Jaguariúna",
-      "opening_hours": {
-        "open_now": false
-      },
-      "place_id": "ChIJL0E0HwDpyJQRqzaipMsHMFk",
-      "plus_code": {
-        "compound_code": "72V7+3Q Centro, Jaguariúna - State of São Paulo",
-        "global_code": "589M72V7+3Q"
-      },
-      "rating": 0,
-      "reference": "ChIJL0E0HwDpyJQRqzaipMsHMFk",
-      "scope": "GOOGLE",
-      "types": [
-        "pharmacy",
-        "health",
-        "point_of_interest",
-        "store",
-        "establishment"
-      ],
-      "user_ratings_total": 0,
-      "vicinity": "R. Alfredo Engler, 219 - Centro, Jaguariúna"
+      "user_ratings_total": 25,
+      "vicinity": "R. Cândido Bueno, 1091 - Centro, Jaguariúna"
     }
   ],
   "status": "OK"

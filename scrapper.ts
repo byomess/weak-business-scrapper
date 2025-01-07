@@ -512,6 +512,13 @@ class FileUtils {
         } else {
           markdown += `  - **Feedback:** Nenhum feedback disponível.\n`;
         }
+
+        markdown += `  - **Mensagens de Consultoria:**\n`;
+        if (place._OVERALL_ANALYSIS_RESULT.consultingMessage) {
+          markdown += `    - ${place._OVERALL_ANALYSIS_RESULT.consultingMessage}\n`;
+        } else {
+          markdown += `    - Nenhuma mensagem de consultoria disponível.\n`;
+        }
       } else {
         markdown += `- **Análise Geral:** Não disponível\n`;
       }

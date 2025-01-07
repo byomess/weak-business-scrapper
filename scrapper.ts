@@ -765,7 +765,7 @@ class PlacesSearchApp {
     let places: PlaceDetailsResult[] = [];
     let nextPageToken: string | undefined;
 
-    // do {
+    do {
       console.log("");
       console.log(`Buscando estabelecimentos, aguarde...`);
       console.log(
@@ -794,7 +794,7 @@ class PlacesSearchApp {
       }
 
       nextPageToken = placesNearbyResult.next_page_token;
-    // } while (nextPageToken);
+    } while (nextPageToken);
 
     console.log("");
     console.log(`Total de estabelecimentos encontrados: ${places.length}`);

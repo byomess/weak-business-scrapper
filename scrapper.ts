@@ -3,6 +3,7 @@
 import { spawnSync, execSync } from "child_process";
 import { createHash } from "crypto";
 import { readFileSync, writeFileSync } from "fs";
+import * as fs from "fs";
 
 interface Config {
   GOOGLE_MAPS_API_KEY: string | undefined;
@@ -356,7 +357,8 @@ class FileUtils {
         .toISOString()
         .replace(/[-:.]/g, "")}.json`;
       writeFileSync(fileName, JSON.stringify(results, null, 2));
-      console.log("Results saved to results.json");
+      const fullPath = fs.realpathSync(fileName);
+      console.log(`Resultados salvos em: ${fullPath}`);
     } catch (error) {
       throw new FileError(
         error instanceof Error ? error.message : String(error)
@@ -551,8 +553,6 @@ class PlacesSearchApp {
       }));
 
       FileUtils.outputResults(placesWithServices);
-
-      console.log("Total places found:", places.length);
     } catch (error) {
       console.error("Error during execution:", error);
       process.exit(1);
@@ -610,6 +610,7 @@ class PlacesSearchApp {
       nextPageToken = placesNearbyResult.next_page_token;
     } while (nextPageToken);
 
+    console.log('');
     console.log(`Total de estabelecimentos encontrados: ${places.length}`);
 
     return places

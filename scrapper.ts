@@ -742,7 +742,7 @@ class AIPlaceScoreCalculator implements PlaceScoreCalculator {
 
   private buildPrompt(place: PlaceDetailsResult): string {
     return `
-  Você é um especialista em análise de dados de estabelecimentos comerciais do Google Meu Negócio. Sua tarefa é avaliar a qualidade das informações de um estabelecimento com base nos dados fornecidos e atribuir um score de 0 a 100. Um score mais alto indica informações completas e de alta qualidade, enquanto um score mais baixo indica informações incompletas ou desatualizadas.
+  Você é um especialista em análise de dados de estabelecimentos comerciais do Google Meu Negócio. Sua tarefa é avaliar a qualidade das informações de um estabelecimento com base nos dados fornecidos, atribuir um score de 0 a 100, e fornecer feedbacks para melhorias. Um score mais alto indica informações completas e de alta qualidade, enquanto um score mais baixo indica informações incompletas, desatualizadas, má formatadas, não claras, ou que não sejam totalmente adequadas.
   
   **Analise os seguintes critérios usando os dados do JSON abaixo:**
   
@@ -754,18 +754,20 @@ class AIPlaceScoreCalculator implements PlaceScoreCalculator {
   *   **\`plus_code\` e \`vicinity\`:** Disponibilidade e informatividade.
   *   **Outros Atributos (\`reservable\`, \`serves_breakfast\`, etc.):** Presença e relevância.
   
-  **Dados do Estabelecimento:**
+  * O estabelecimento em questão tem o nome de **${place.result.name}**, e foi encontrado através de uma pesquisa pelo termo "${process.argv[2]}".
+
+  **Dados do Estabelecimento obtidos através da API Google Places:
   
   \`\`\`json
   ${JSON.stringify(place.result, null, 2)}
   \`\`\`
   
-  **Com base nesses dados, atribua um score de 0 a 100 e gere feedbacks com sugestões de melhorias.**
+  **Com base nesses dados, atribua um score de 0 a 100 e gere feedbacks com sugestões de melhorias. Dê apenas sugestões válidas para o estabelecimento, para soluções de problemas que possam agregar melhores resultados, como atrair mais clientes, passar mais credibilidade, etc.**
   
   **Lembre-se:**
   
-  *   Não mencione critérios que dependem de análises manuais (qualidade do website, interação em redes sociais, etc.).
-  *   Não faça presunções, baseie-se apenas nos dados fornecidos.
+  *   Não tome como critério pontos que dependem de análises manuais ou que dependam de informações não disponíveis no JSON acima (qualidade do website, qualidade das fotos, interação em redes sociais, etc.).
+  *   Não faça presunções, baseie-se apenas nos dados fornecidos para atribuir o score.
   
   **Se aplicável, gere uma mensagem personalizada para WhatsApp oferecendo os seguintes serviços, com base nos feedbacks gerados:**
   
@@ -774,7 +776,7 @@ class AIPlaceScoreCalculator implements PlaceScoreCalculator {
   *   **Alavancagem de Negócio com Marketing Digital:** Se houver menos de 5 avaliações.
   *   **Criação de Website:** Se não houver website.
   
-  **A mensagem deve seguir o seguinte exemplo de roteiro, e incluir as seguintes informações, SEMPRE que houver pontos de melhoria identificados:**
+  **A mensagem deve usar como base o seguinte exemplo de roteiro, e incluir as seguintes informações, SEMPRE que houver pontos de melhoria identificados:**
   
   *   **Quantidade de Pontos de Melhoria:** "Identificamos X pontos no cadastro do seu estabelecimento no Google Meu Negócio que pode estar fazendo você perder clientes, mas podemos te ajudar."
   *   **Oferta de Atualização Automática:** "Oferecemos um serviço de atualização automática do cadastro do seu estabelecimento, que leva apenas 5 minutos. Num piscar de olhos, todos os gargalos que encontramos no cadastro do seu negócio vão ser resolvidos!
@@ -783,7 +785,7 @@ class AIPlaceScoreCalculator implements PlaceScoreCalculator {
   *   **Call To Action:**: "Caso esteja interessado na consultoria e queira saber mais, basta responder esta mensagem."
   *   **Despedida Amigável:** "Estamos ansiosos para poder ajudar o seu negócio a ter seu máximo potencial online! 🙂"
   
-  **A mensagem acima é apenas um sugestão, mas a mensagem deve:**
+  **A mensagem acima é apenas um sugestão, podendo ser livremente customizada, mas a mensagem deve:**
   
   *   **Passar credibilidade, profissionalismo, ser amigável e com alto potencial de venda.**
   *   **Incentivar o cliente a entrar em contato para saber mais sobre os serviços e valores, criando um senso de urgência, exclusividade e atendimento personalizado.**
@@ -791,7 +793,7 @@ class AIPlaceScoreCalculator implements PlaceScoreCalculator {
   
   **A natureza da linguagem usada na mensagem, que pode ser desde a mais casual até mais formal, e a liberdade no uso de emojis, deve estar de acordo com o tipo do negócio alvo. Use a melhor abordagem para cada tipo de negócio!
 
-  **NÃO MENCIONE O NOME DAS PROPRIEDADES DO JSON NA MENSAGEM, E NÃO USE TERMOS EXTREMAMENTE TÉCNICOS, POIS A MENSAGEM SERÁ USADA PARA ABORDAGEM COMERCIAL, ENVIADA PARA O WHATSAPP DA EMPRESA.**
+  **NÃO MENCIONE O NOME DAS PROPRIEDADES DO JSON NA MENSAGEM, E NÃO USE TERMOS EXTREMAMENTE TÉCNICOS. A MENSAGEM DEVE SER ADEQUADA PARA UMA ABORDAGEM COMERCIAL, PORTANTO, DEVE SER SIMPLES, DIRETA E CLARA.
 
   **O SERVIÇO QUE DEVE SER ENFATIZADO É O DE ATUALIZAÇÃO DE CADASTRO NO GOOGLE MEU NEGÓCIO, SENDO OS OUTROS SERVIÇOS COMO SECUNDÁRIOS, COMO O DE DESENVOLVIMENTO DE WEBSITES, QUANDO APLICÁVEIS, DEVEM SER MENCIONADOS SOMENTE AO FINAL DA MENSAGEM.**
 

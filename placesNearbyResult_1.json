@@ -1,0 +1,1012 @@
+{
+  "html_attributions": [],
+  "next_page_token": "AWYs27w-7wUbvhEDc5rA381NMOEhkv85T1jD909jP3WEklZW3bhj_TaphGJ3ddfWSKJt_gB76K0IPJHFTmmXCi9-VU67iRdPwDnQRf6e91_y6WXNQ69tT_-SOOkd6uA_1UGU5BgSzd7h59M9WodzexYt5WHMSiysUtPVa77EOmoS2_yrEuFTBimhfnvA8ypAW_D1P1HFkSvj7Sx67434_rFC9tiY0LGYeITlhT3LXqaHxWxVoygh4q8tO0XiQ9KKx5ytyBVKJyZBp3QrzTBK5mJwpyiBc_iVfDVI0Th-NFchrlKZSfydi0ITD1nLtbls0I0Nnktnm3XixNzkMLjyh3U1JNRSX-9UkRuBVVZGpTsmDmgU87ALxTbCcv1VI2huR8sbHdAPBbbE1bLhiyigYV9TSwsxvwRwnXkb7zi6vsxx-VQQRe4a6anuxmw",
+  "results": [
+    {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": -22.7045981,
+          "lng": -46.9883855
+        },
+        "viewport": {
+          "northeast": {
+            "lat": -22.70322892010728,
+            "lng": -46.98698527010728
+          },
+          "southwest": {
+            "lat": -22.70592857989272,
+            "lng": -46.98968492989272
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+      "name": "Salão Da Clô Unissex",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 3120,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/112872091626147653219\">Vicente Fagundes</a>"
+          ],
+          "photo_reference": "AWYs27w3ksyY-1Wa7v5gOxBUlOqSA9rMWVPk3PHHSy2nJh29yYCxyUwN_2jaat3SCHyrRNTsu7yF_QngMYqsWOGNaRXkQGnSkFlq2ZZUVudZFb7F9hvh92LFsWyccZ8ynmtLGbQ1RTZomNUCsjS6xePoPG8Bkwt6Qi4RjDw7AtDZoa_iAIFQ",
+          "width": 4160
+        }
+      ],
+      "place_id": "ChIJ3_TZcQXoyJQRUfEQPquo48c",
+      "plus_code": {
+        "compound_code": "72W6+5J Jaguariúna, State of São Paulo",
+        "global_code": "589M72W6+5J"
+      },
+      "rating": 4.7,
+      "reference": "ChIJ3_TZcQXoyJQRUfEQPquo48c",
+      "scope": "GOOGLE",
+      "types": [
+        "beauty_salon",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 26,
+      "vicinity": "Centro, Jaguariúna"
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": -22.7028813,
+          "lng": -46.9852549
+        },
+        "viewport": {
+          "northeast": {
+            "lat": -22.70156442010728,
+            "lng": -46.98399157010728
+          },
+          "southwest": {
+            "lat": -22.70426407989272,
+            "lng": -46.98669122989272
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+      "name": "Claudia Haiashida Beauty Studio",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 2304,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/112881331223785913934\">A Google User</a>"
+          ],
+          "photo_reference": "AWYs27yFIykRdM6647XhtQiiWsqIPBrGBGtHSfUM40zOvYUQDOUsJYUCvxZIRiNyOmRBuj3g8HkF6akL4kWL2dF3TaCka9snDr6gIg_jEs3j1u3oSN7lwXgAzJ2uGxfy--ySiNy4HySgIaBFpPms4iRBqPbm8B9ZkfCt7zgdrIRcJe7J4v3k",
+          "width": 1728
+        }
+      ],
+      "place_id": "ChIJwfDa1QbpyJQROLYiIE2Aqag",
+      "plus_code": {
+        "compound_code": "72W7+RV Jaguariúna, State of São Paulo",
+        "global_code": "589M72W7+RV"
+      },
+      "rating": 4.9,
+      "reference": "ChIJwfDa1QbpyJQROLYiIE2Aqag",
+      "scope": "GOOGLE",
+      "types": [
+        "beauty_salon",
+        "hair_care",
+        "point_of_interest",
+        "store",
+        "establishment"
+      ],
+      "user_ratings_total": 32,
+      "vicinity": "R. José Alves Guedes, 650 - Santa Maria, Jaguariúna"
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": -22.7070994,
+          "lng": -46.98738059999999
+        },
+        "viewport": {
+          "northeast": {
+            "lat": -22.70586292010728,
+            "lng": -46.98597772010728
+          },
+          "southwest": {
+            "lat": -22.70856257989272,
+            "lng": -46.98867737989272
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+      "name": "Sarah Correa Beauté",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 4032,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/105440912066452258888\">A Google User</a>"
+          ],
+          "photo_reference": "AWYs27zlNCIDVrzvg-DsGnOSi2qmGTCDRmrsGYppwQh2vJZQ9w9oTNGN_BUCXIAyuvKGJSG1PMH0tWHr-rjjcl1WEQu5lSgphf2FwiPd8Nb2-pnu1hiCjhZ_WBkuZU7hDlzZDxl5Uv7GFhJtdYxr3PFCCL66q1HaJUfPodPYtWyjnY89L6Qr",
+          "width": 3024
+        }
+      ],
+      "place_id": "ChIJ2_fdssfpyJQR6ZGXKxa-FA0",
+      "plus_code": {
+        "compound_code": "72V7+52 Centro, Jaguariúna - State of São Paulo",
+        "global_code": "589M72V7+52"
+      },
+      "rating": 5,
+      "reference": "ChIJ2_fdssfpyJQR6ZGXKxa-FA0",
+      "scope": "GOOGLE",
+      "types": [
+        "beauty_salon",
+        "hair_care",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 103,
+      "vicinity": "Studio Bruno Moraes - R. Cândido Bueno, 759 - Centro, Jaguariúna"
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": -22.7085302,
+          "lng": -46.9900569
+        },
+        "viewport": {
+          "northeast": {
+            "lat": -22.70710237010728,
+            "lng": -46.98873862010727
+          },
+          "southwest": {
+            "lat": -22.70980202989272,
+            "lng": -46.99143827989271
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+      "name": "Espaço Tati Nunes / Salão de Cabelo em Jaguariúna-SP",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 659,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/106016133268843839322\">A Google User</a>"
+          ],
+          "photo_reference": "AWYs27yOyBKezJ6opPw12poT8MB5J2f6h0vuxxYFGlf9YRotqqoIZfrukz29mqYVnn1A7I3tLepvUcrwPdbObQnPQUIaMVYgo6o9He3atD4rEvHzGwSmDd8IsR_fqcLuk6TP9aG5ffHGPsifrSYouS3Buq4j4YQ_uXZfPJ8uywShL4zhFWnL",
+          "width": 1170
+        }
+      ],
+      "place_id": "ChIJAScgatLpyJQR8pzXaHOYlik",
+      "plus_code": {
+        "compound_code": "72R5+HX Jardim Berlim, Jaguariúna - State of São Paulo",
+        "global_code": "589M72R5+HX"
+      },
+      "rating": 5,
+      "reference": "ChIJAScgatLpyJQR8pzXaHOYlik",
+      "scope": "GOOGLE",
+      "types": [
+        "beauty_salon",
+        "hair_care",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 73,
+      "vicinity": "R. Cândido Bueno, 444 - Jardim Berlim, Jaguariúna"
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": -22.7071752,
+          "lng": -46.9850953
+        },
+        "viewport": {
+          "northeast": {
+            "lat": -22.70589742010728,
+            "lng": -46.98371477010728
+          },
+          "southwest": {
+            "lat": -22.70859707989272,
+            "lng": -46.98641442989272
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+      "name": "Studio Fran Morais | Salão de Beleza e Cabeleireira",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 720,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/100798267990733769247\">A Google User</a>"
+          ],
+          "photo_reference": "AWYs27yA--65NIsHSQFnJrYexE1K7rXEYYUC7ZHONJLcW6HcCfjHrj-i30CDYrkPwCaoWlUIUVsxQl5C5m6_TstCrsY4FAYFrzttlfXDHwH1Hr5Op1K8uMrEn1BC1HNXTCp7Vw4DEYxa9tYMdl2eETvrDNQM7yOy-vHZO4xCyBrq8fsz-QV2",
+          "width": 1080
+        }
+      ],
+      "place_id": "ChIJIYVnwhHpyJQRIxqpR0s4viI",
+      "plus_code": {
+        "compound_code": "72V7+4X Centro, Jaguariúna - State of São Paulo",
+        "global_code": "589M72V7+4X"
+      },
+      "rating": 4.9,
+      "reference": "ChIJIYVnwhHpyJQRIxqpR0s4viI",
+      "scope": "GOOGLE",
+      "types": [
+        "beauty_salon",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 36,
+      "vicinity": "R. Alfredo Engler, 275A - Centro, Jaguariúna"
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": -22.7014916,
+          "lng": -46.98956339999999
+        },
+        "viewport": {
+          "northeast": {
+            "lat": -22.70018502010728,
+            "lng": -46.98815507010728
+          },
+          "southwest": {
+            "lat": -22.70288467989272,
+            "lng": -46.99085472989272
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+      "name": "Ju Celeghin - Beauty Artist",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 2048,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/109131093730046079844\">A Google User</a>"
+          ],
+          "photo_reference": "AWYs27z91QTGMprrWTrsiYxza9HKIEQy86rJQclsTJIvI8BTK6s9PxXEw5PfmCbWmR_ur8crY7TUxNUSV0q8vMiWT4JbQ3nKSoIhZM4306yj65sOWov_bM56q7zT5BzgQIgZiuCfXEPbmY0mECElfwOh50YzzrppIt8ZBAYHyeGw3cL95B3u",
+          "width": 1536
+        }
+      ],
+      "place_id": "ChIJieAfZSvpyJQRf3JFH1Z-6wc",
+      "plus_code": {
+        "compound_code": "72X6+C5 Jaguariúna, State of São Paulo",
+        "global_code": "589M72X6+C5"
+      },
+      "rating": 5,
+      "reference": "ChIJieAfZSvpyJQRf3JFH1Z-6wc",
+      "scope": "GOOGLE",
+      "types": [
+        "beauty_salon",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 34,
+      "vicinity": "R. Mato Grosso, 343 - Dom Bosco, Jaguariúna"
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": -22.7056585,
+          "lng": -46.98675859999999
+        },
+        "viewport": {
+          "northeast": {
+            "lat": -22.70432532010728,
+            "lng": -46.98545267010727
+          },
+          "southwest": {
+            "lat": -22.70702497989272,
+            "lng": -46.98815232989271
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+      "name": "Salão De Beleza Claudete",
+      "opening_hours": {
+        "open_now": true
+      },
+      "place_id": "ChIJLVXStAXoyJQRYXCAWQUutp4",
+      "plus_code": {
+        "compound_code": "72V7+P7 Jaguariúna, State of São Paulo",
+        "global_code": "589M72V7+P7"
+      },
+      "rating": 5,
+      "reference": "ChIJLVXStAXoyJQRYXCAWQUutp4",
+      "scope": "GOOGLE",
+      "types": [
+        "beauty_salon",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 9,
+      "vicinity": "Centro, Jaguariúna"
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": -22.7071741,
+          "lng": -46.9873834
+        },
+        "viewport": {
+          "northeast": {
+            "lat": -22.70589482010728,
+            "lng": -46.98600062010728
+          },
+          "southwest": {
+            "lat": -22.70859447989272,
+            "lng": -46.98870027989273
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+      "name": "Bruno Moraes Concept",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 1125,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/104517731148583240222\">A Google User</a>"
+          ],
+          "photo_reference": "AWYs27yx04xpVzOQNov06ZX6CbcyfPZrEuOg8fcNxmmARc3e0chFmGe949ioKfIfdhQYlEh1qEPq7za1mlIdYlvh_6Iw0IvOpND3hKbHiDaiixxOGVx-QuDa8MJKdwbr0iNiVFUzPU0VDt6vxcEXpEKUhn2NBjvXKfh4D8CLEQUdgNiOqd51",
+          "width": 1125
+        }
+      ],
+      "place_id": "ChIJPZw3ZgXoyJQRqb3zI8wmvb0",
+      "plus_code": {
+        "compound_code": "72V7+42 Centro, Jaguariúna - State of São Paulo",
+        "global_code": "589M72V7+42"
+      },
+      "rating": 4.8,
+      "reference": "ChIJPZw3ZgXoyJQRqb3zI8wmvb0",
+      "scope": "GOOGLE",
+      "types": [
+        "beauty_salon",
+        "hair_care",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 51,
+      "vicinity": "R. Cândido Bueno, 759 - Centro, Jaguariúna"
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": -22.7055473,
+          "lng": -46.99137100000001
+        },
+        "viewport": {
+          "northeast": {
+            "lat": -22.70414167010728,
+            "lng": -46.99003092010728
+          },
+          "southwest": {
+            "lat": -22.70684132989272,
+            "lng": -46.99273057989272
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+      "name": "Espaço Estética & Beleza",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 422,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/116425975822947454896\">A Google User</a>"
+          ],
+          "photo_reference": "AWYs27xKPBKfIuEkFr1UuE0GDxj2_Bf5Ych_jEWwswRuSfWtd2UGQVsoOMLdprl34mKR-l0AnKi_jLbycJUvFJxvmn4b4wXgLLdZf6dp2L-81j4MYbsKaOc5hgGN3SRGXz_2aNZMSq8TbU4M24PD109wsDmVSt_APlJh-r_Ei8cH2VPtNCqB",
+          "width": 750
+        }
+      ],
+      "place_id": "ChIJE1NtFWDpyJQRGSzQNCFmcio",
+      "plus_code": {
+        "compound_code": "72V5+QF Jardim Berlim, Jaguariúna - State of São Paulo",
+        "global_code": "589M72V5+QF"
+      },
+      "rating": 5,
+      "reference": "ChIJE1NtFWDpyJQRGSzQNCFmcio",
+      "scope": "GOOGLE",
+      "types": [
+        "beauty_salon",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 11,
+      "vicinity": "Rua Holanda 612A Ao lado do Empório Mais Viver, próximo ao Jaguar Club - Jardim Berlim, Jaguariúna"
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": -22.7051899,
+          "lng": -46.9881153
+        },
+        "viewport": {
+          "northeast": {
+            "lat": -22.70393462010728,
+            "lng": -46.98672397010727
+          },
+          "southwest": {
+            "lat": -22.70663427989272,
+            "lng": -46.98942362989271
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+      "name": "Thais Cantizano Beauty",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 1284,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/103667504753929392757\">A Google User</a>"
+          ],
+          "photo_reference": "AWYs27wufEYAYv6iYPcc7fH77jL7Oa88wDXfltbaXajuNovlAfVp80djFVA4WD52q3T40NCe5zYJJ1so1P0Nrxub4oge6kmqHBxG8Nk5MQd8FByguvwIZe-2IRlykgCDsq_Z3JIv-Rr2yMAONwSeg2nhivTfUVdHJSrb_MrzR_YNX4KCIxOu",
+          "width": 1284
+        }
+      ],
+      "place_id": "ChIJx3GPXmLpyJQRvuWx-INZbKM",
+      "plus_code": {
+        "compound_code": "72V6+WQ Centro, Jaguariúna - State of São Paulo",
+        "global_code": "589M72V6+WQ"
+      },
+      "rating": 4.9,
+      "reference": "ChIJx3GPXmLpyJQRvuWx-INZbKM",
+      "scope": "GOOGLE",
+      "types": [
+        "beauty_salon",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 28,
+      "vicinity": "Av. Lauro de Carvalho, 943 - Centro, Jaguariúna"
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": -22.7048624,
+          "lng": -46.9864469
+        },
+        "viewport": {
+          "northeast": {
+            "lat": -22.70346847010728,
+            "lng": -46.98511642010727
+          },
+          "southwest": {
+            "lat": -22.70616812989272,
+            "lng": -46.98781607989272
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+      "name": "Salão Esmeralda",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 4128,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/108178255470836876435\">A Google User</a>"
+          ],
+          "photo_reference": "AWYs27we9jGUHJrwwLf9PQGClsH_rPff28pR_KmVQNvKUIJaidTRydvq5Y9TabBr8XbzTht3oWk7cMbqtp2yO3lQiiUEOmfm6Peuou4i1Tz1_mvis49GRxA5Zd58OAn9a_olOQpWXQRrI5oHlazVFZkSpuBsMIR19pk4aw7gKvvhfFiCdWpK",
+          "width": 3096
+        }
+      ],
+      "place_id": "ChIJj6OlyAXoyJQRXHHMFEAxEC0",
+      "plus_code": {
+        "compound_code": "72W7+3C Centro, Jaguariúna - State of São Paulo",
+        "global_code": "589M72W7+3C"
+      },
+      "rating": 4.5,
+      "reference": "ChIJj6OlyAXoyJQRXHHMFEAxEC0",
+      "scope": "GOOGLE",
+      "types": [
+        "beauty_salon",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 20,
+      "vicinity": "Av. Lauro de Carvalho, 1124 - Centro, Jaguariúna"
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": -22.7018954,
+          "lng": -46.9872007
+        },
+        "viewport": {
+          "northeast": {
+            "lat": -22.70051952010728,
+            "lng": -46.98578507010728
+          },
+          "southwest": {
+            "lat": -22.70321917989272,
+            "lng": -46.98848472989272
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+      "name": "Studio De Beleza & Art",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 3024,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/112155867906044915779\">A Google User</a>"
+          ],
+          "photo_reference": "AWYs27wdySDm-7xSkTjovPlbaP17imW90356fxpIcaNZUfijZaHaQw82wvdeWru6tb3dCMDLhjIv44c8gRXr1SmgIK2C9mjivcitduFaE46bmlM0j_nFml6mp1w5Pbmw9SLUM6Ire0zYKJcd2naunEtI_K248DKpu6tyru_aLWkhlnyykmcW",
+          "width": 4032
+        }
+      ],
+      "place_id": "ChIJ5zA4uLXpyJQR2m_Z3infot4",
+      "plus_code": {
+        "compound_code": "72X7+64 Jaguariúna, State of São Paulo",
+        "global_code": "589M72X7+64"
+      },
+      "rating": 5,
+      "reference": "ChIJ5zA4uLXpyJQR2m_Z3infot4",
+      "scope": "GOOGLE",
+      "types": [
+        "beauty_salon",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 4,
+      "vicinity": "R. Cel. Amâncio Bueno, 845 - sala1 - Santa Maria, Jaguariúna"
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": -22.7075219,
+          "lng": -46.9875468
+        },
+        "viewport": {
+          "northeast": {
+            "lat": -22.70613517010728,
+            "lng": -46.98621417010728
+          },
+          "southwest": {
+            "lat": -22.70883482989272,
+            "lng": -46.98891382989272
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+      "name": "Júlia Oliveira | BEAUTY & ACADEMY",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 1573,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/102813768618823032441\">A Google User</a>"
+          ],
+          "photo_reference": "AWYs27yQIqmxj9cpOIs3VvES125dsSV2wYFuIwa_KwrsdcWaaLuplq3TLYDD0dGG_GAW8_m4K7astnKr7uIRoVwtwXNPdV50iq3o5p_3ca2Cbbnv4CGtgy6M_xjgrba0MsyNW9wTGo75Kz_2gIgU4o6cEuwVdjaoYEkfencEY3nJEldirdQX",
+          "width": 2794
+        }
+      ],
+      "place_id": "ChIJNWdGFrfpyJQRJiuJV9_XbyE",
+      "plus_code": {
+        "compound_code": "72R6+XX Centro, Jaguariúna - State of São Paulo",
+        "global_code": "589M72R6+XX"
+      },
+      "rating": 5,
+      "reference": "ChIJNWdGFrfpyJQRJiuJV9_XbyE",
+      "scope": "GOOGLE",
+      "types": [
+        "beauty_salon",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 9,
+      "vicinity": "R. Cândido Bueno, 746 - sala 4 - Centro, Jaguariúna"
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": -22.7085536,
+          "lng": -46.9909506
+        },
+        "viewport": {
+          "northeast": {
+            "lat": -22.70726012010728,
+            "lng": -46.98957422010729
+          },
+          "southwest": {
+            "lat": -22.70995977989272,
+            "lng": -46.99227387989274
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+      "name": "Studio Felippe Machado",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 6000,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/109225756963258668114\">A Google User</a>"
+          ],
+          "photo_reference": "AWYs27woO28Kl7t5tzezTjYI3KNtFPM31wBu1RrK4hFC3eo9Xk6foweunbjLuPNkrDtTRAseOhoHF4kuSze19XhKzZHXCZs_4_opW-mrwLC3ewDUbVzqDmE0TE8hbUpojApWuQoNVlRnNFmayHkZEkCgC7QLSUI6qcy2Fli2M-2pdG5XkDIM",
+          "width": 8000
+        }
+      ],
+      "place_id": "ChIJE0G8CVHpyJQRrqAkItXjXVs",
+      "plus_code": {
+        "compound_code": "72R5+HJ Jaguariúna, State of São Paulo",
+        "global_code": "589M72R5+HJ"
+      },
+      "rating": 5,
+      "reference": "ChIJE0G8CVHpyJQRrqAkItXjXVs",
+      "scope": "GOOGLE",
+      "types": [
+        "beauty_salon",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 4,
+      "vicinity": "R. Cândido Bueno, 361B - Berlim, Jaguariúna"
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": -22.7042076,
+          "lng": -46.9907103
+        },
+        "viewport": {
+          "northeast": {
+            "lat": -22.70282742010728,
+            "lng": -46.98937467010727
+          },
+          "southwest": {
+            "lat": -22.70552707989272,
+            "lng": -46.99207432989272
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+      "name": "Zaira Rocha Depilação",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 4080,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/102346532493439795977\">A Google User</a>"
+          ],
+          "photo_reference": "AWYs27wnwQi-7t7xBho66ncAB-dvIIWPE1xi71f9XDHQzJMZ26E56-1D0K8iAHAB0dUg2Z0AQCo9_IArbYK_yiJRUKg-wxHngVp9nmf7HFGzKxcOoR5-4maAnnhS3mg2-IquxR0CN3sUh_9vJ3I5zj2PhLIPr_-D8WioBd8d-ELXnwFm7Dpx",
+          "width": 3072
+        }
+      ],
+      "place_id": "ChIJN7_XQsXpyJQRudhrhl11GjA",
+      "plus_code": {
+        "compound_code": "72W5+8P Centro, Jaguariúna - State of São Paulo",
+        "global_code": "589M72W5+8P"
+      },
+      "rating": 5,
+      "reference": "ChIJN7_XQsXpyJQRudhrhl11GjA",
+      "scope": "GOOGLE",
+      "types": [
+        "beauty_salon",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 50,
+      "vicinity": "R. Joaquim Bueno, 744 - Centro, Jaguariúna"
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": -22.7075191,
+          "lng": -46.9875391
+        },
+        "viewport": {
+          "northeast": {
+            "lat": -22.70613207010728,
+            "lng": -46.98620592010727
+          },
+          "southwest": {
+            "lat": -22.70883172989272,
+            "lng": -46.98890557989272
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+      "name": "Espaço Katia Palaria",
+      "opening_hours": {
+        "open_now": true
+      },
+      "place_id": "ChIJP2fxTAHoyJQRRUOViUt1PR4",
+      "plus_code": {
+        "compound_code": "72R6+XX Centro, Jaguariúna - State of São Paulo",
+        "global_code": "589M72R6+XX"
+      },
+      "rating": 5,
+      "reference": "ChIJP2fxTAHoyJQRRUOViUt1PR4",
+      "scope": "GOOGLE",
+      "types": [
+        "beauty_salon",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 1,
+      "vicinity": "R. Cândido Bueno, 746 - Centro, Jaguariúna"
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": -22.708783,
+          "lng": -46.99037089999999
+        },
+        "viewport": {
+          "northeast": {
+            "lat": -22.70745817010728,
+            "lng": -46.98909362010728
+          },
+          "southwest": {
+            "lat": -22.71015782989272,
+            "lng": -46.99179327989272
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+      "name": "Studio Keiti Muramatsu - Sobrancelhas | Maquiagem Jaguariúna",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 2825,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/110685633177439713813\">A Google User</a>"
+          ],
+          "photo_reference": "AWYs27z7yGbMDmgDKRe0zZh7VwcNE7_nzQRcfRz0yvXTNRZSLpePaGWV77dmsOr32_v95AY-1EJspG_wcd2gSdiKPIdbnmMBwAZ7EIlyVxsq0KDXM6Exy5bCU_doI_li6XRPZNruXLCRq6aD2hcoF2J0Wk49pRfv2gGdI06a_7iwouRw5xyJ",
+          "width": 1965
+        }
+      ],
+      "place_id": "ChIJJ3W-psTpyJQRMrxCadVeItY",
+      "plus_code": {
+        "compound_code": "72R5+FV Jaguariúna, State of São Paulo",
+        "global_code": "589M72R5+FV"
+      },
+      "rating": 5,
+      "reference": "ChIJJ3W-psTpyJQRMrxCadVeItY",
+      "scope": "GOOGLE",
+      "types": [
+        "beauty_salon",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 18,
+      "vicinity": "R. Gen. Gomes Carneiro, 74 - Berlim, Jaguariúna"
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": -22.6995771,
+          "lng": -46.98675859999999
+        },
+        "viewport": {
+          "northeast": {
+            "lat": -22.69823977010728,
+            "lng": -46.98544392010727
+          },
+          "southwest": {
+            "lat": -22.70093942989272,
+            "lng": -46.98814357989272
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+      "name": "Studio Taís Vasque",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 3264,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/104727983003881104675\">A Google User</a>"
+          ],
+          "photo_reference": "AWYs27xKb91QK-Rt7KLGDsrGZBWDhA8HuDrrUi0-waSG1rOOLs58JJAghBojY3iw5fNaj_R38J9rMLszlNkIAlYKGkFgK2cttLOUuJqW2hz0zYPb1GbUzNY21gZ19PeG1rCas5r2XNmQHsQJ3DKhz3x94UAAQdiMfApKlmMfw4-SzBR7EVR2",
+          "width": 3264
+        }
+      ],
+      "place_id": "ChIJIcqVLfrpyJQR1_FHCTk42bI",
+      "plus_code": {
+        "compound_code": "8227+58 Jaguariúna, State of São Paulo",
+        "global_code": "589M8227+58"
+      },
+      "rating": 5,
+      "reference": "ChIJIcqVLfrpyJQR1_FHCTk42bI",
+      "scope": "GOOGLE",
+      "types": [
+        "beauty_salon",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 1,
+      "vicinity": "R. José Alves Guedes, 306 - Sala 2 - Parque Santa Maria, Jaguariúna"
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": -22.7000021,
+          "lng": -46.99391019999999
+        },
+        "viewport": {
+          "northeast": {
+            "lat": -22.69874377010728,
+            "lng": -46.99265557010727
+          },
+          "southwest": {
+            "lat": -22.70144342989272,
+            "lng": -46.99535522989272
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+      "name": "Maquiadora profissional em Jaguariúna",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 501,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/102025467350241614273\">A Google User</a>"
+          ],
+          "photo_reference": "AWYs27zoi_SSa2_k7DyYBhMAeMXm6pQ3xWf-HqTaCjmXs1nMhr_SDWZK4vZeDmeZfej2jRauhafBPapQGhF7GszfTxNxQFnXZqhfHqvQrzbei1HO2DeAl9xvkG7m0SxYgbTaeY4oc-EcelDOdsBnEZE_A3yGmOKTjPg4RFWlqlHLlfVmhaU0",
+          "width": 501
+        }
+      ],
+      "place_id": "ChIJMSOQhaPpyJQRBREAi6lH2k0",
+      "plus_code": {
+        "compound_code": "72X4+XC Centro, Jaguariúna - State of São Paulo",
+        "global_code": "589M72X4+XC"
+      },
+      "rating": 5,
+      "reference": "ChIJMSOQhaPpyJQRBREAi6lH2k0",
+      "scope": "GOOGLE",
+      "types": [
+        "beauty_salon",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 27,
+      "vicinity": "R. São Paulo, 570 - Centro, Jaguariúna"
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": -22.7074099,
+          "lng": -46.9856789
+        },
+        "viewport": {
+          "northeast": {
+            "lat": -22.70614137010728,
+            "lng": -46.98429447010727
+          },
+          "southwest": {
+            "lat": -22.70884102989272,
+            "lng": -46.98699412989271
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+      "icon_background_color": "#7B9EB0",
+      "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+      "name": "Sg Ateliê Da Beleza",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 685,
+          "html_attributions": [
+            "<a href=\"https://maps.google.com/maps/contrib/103462004250551886102\">A Google User</a>"
+          ],
+          "photo_reference": "AWYs27xK8C1eF44tGXimPa6OtoI5OpSrStQXk8mUaA3FwzpHJ3uQQn-beBpOCL8yzRkWqUUSv1Cw5zG77vK5mmZ5Dqc5IJkWnNi7RqqlV2oeblg6iyepPlgfw0TQI2-m4Kb6AvcgVyRXMy91Yw5OyRi5ETLTjNZknr84TaeO2UcQoJDWSiVy",
+          "width": 514
+        }
+      ],
+      "place_id": "ChIJgdW4vLDpyJQRBVve799yWk8",
+      "plus_code": {
+        "compound_code": "72V7+2P Centro, Jaguariúna - State of São Paulo",
+        "global_code": "589M72V7+2P"
+      },
+      "rating": 5,
+      "reference": "ChIJgdW4vLDpyJQRBVve799yWk8",
+      "scope": "GOOGLE",
+      "types": [
+        "beauty_salon",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 1,
+      "vicinity": "R. Alfredo Engler, 209 - Sala 08 - Centro, Jaguariúna"
+    }
+  ],
+  "status": "OK"
+}

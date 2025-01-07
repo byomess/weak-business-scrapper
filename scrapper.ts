@@ -39,10 +39,21 @@ const serviceSuggestions: ServiceSuggestion[] = [
   {
     name: "Atualização do Cadastro no Google Meu Negócio",
     condition: (place) =>
-      !place.result.opening_hours || // No opening hours
-      !place.result.formatted_phone_number || // No phone number
-      !place.result.photos?.length, // No photos
+      !place.result.opening_hours ||
+      !place.result.formatted_phone_number ||
+      !place.result.photos?.length ||
+      !place.result.formatted_address ||
+      place.result.types?.length < 3 ||
+      place._OVERALL_ANALYSIS_RESULT.score < 70,
   },
+  {
+    name: "Consultoria em Estratégias para Satisfação de Clientes",
+    condition: (place) => place.result.rating < 3.5,
+  },
+  {
+    name: "Alavancagem de Negócio com Marketing Digital",
+    condition: (place) => place.result.reviews?.length < 5
+  }
 ];
 
 // Error Handling
@@ -669,91 +680,125 @@ class AIPlaceScoreCalculator implements PlaceScoreCalculator {
     }
   }
 
+  // private buildPrompt(place: PlaceDetailsResult): string {
+  //   return `
+  // Você é um especialista em análise de dados de estabelecimentos comerciais do Google Meu Negócio. Sua tarefa é avaliar a qualidade das informações de um estabelecimento com base nos dados fornecidos e atribuir um score de 0 a 100. Um score mais alto indica informações completas e de alta qualidade, enquanto um score mais baixo indica informações incompletas ou desatualizadas.
+  
+  // **Analise os seguintes critérios usando os dados do JSON abaixo:**
+  
+  // *   **Existência e Validade de Dados Essenciais:** Nome, endereço completo e formatado, telefone, website (próprio, não rede social) e status de funcionamento (\`business_status\`).
+  // *   **Horário de Funcionamento:** Disponibilidade, detalhes por dia da semana (\`weekday_text\`) e consistência.
+  // *   **Avaliações:** Quantidade (\`user_ratings_total\`), nota média (\`rating\`), recência (últimos 3 meses) e qualidade (avaliações com texto).
+  // *   **Fotos:** Quantidade (\`photos\`), diversidade e atribuição ao proprietário (\`html_attributions\`).
+  // *   **Atributos (\`types\`):** Relevância e quantidade.
+  // *   **\`plus_code\` e \`vicinity\`:** Disponibilidade e informatividade.
+  // *   **Outros Atributos (\`reservable\`, \`serves_breakfast\`, etc.):** Presença e relevância.
+  
+  // **Dados do Estabelecimento:**
+  
+  // \`\`\`json
+  // ${JSON.stringify(place.result, null, 2)}
+  // \`\`\`
+  
+  // **Com base nesses dados, atribua um score de 0 a 100 e gere feedbacks com sugestões de melhorias.**
+  
+  // **Lembre-se:**
+  
+  // *   Não mencione critérios que dependem de análises manuais (qualidade do website, interação em redes sociais, etc.).
+  // *   Não faça presunções, baseie-se apenas nos dados fornecidos.
+  
+  // **Se aplicável, gere uma mensagem personalizada para WhatsApp oferecendo os seguintes serviços (com valores), com base nos feedbacks gerados:**
+  
+  // *   **Criação de Website (a partir de R$ 100,00):** Se não houver website.
+  // *   **Atualização do Cadastro no Google Meu Negócio (R$ 50,00):** Se houver informações básicas ausentes ou desatualizadas, nota média < 4.5 ou score geral < 70.
+  // *   **Consultoria em Estratégias para Satisfação de Clientes (a combinar):** Se nota média < 3.5.
+  // *   **Alavancagem de Negócio com Marketing Digital (campanhas a partir de R$ 50,00):** Se houver menos de 5 avaliações.
+  
+  // **A mensagem DEVE OBRIGATORIAMENTE incluir as seguintes informações, SEMPRE que houver pontos de melhoria identificados:**
+  
+  // *   **Quantidade de Pontos de Melhoria:**  "Identificamos X pontos de melhoria..."
+  // *   **Oferta de Detalhamento por R$ 10,00:**  "...Gostaria de receber um relatório completo e detalhado sobre esses pontos? Estamos com um valor de promocional extremamente baixo, apenas R$ 10,00! O relatório também terá as informações otimizadas, caso queira fazer a atualização por conta própria..."
+  // *   **Opção de Desconto na Atualização Completa:** "...Se, após analisar, você optar por nosso serviço de atualização automatizada, no valor promocional de R$ 50,00, você pagará apenas a diferença (R$ 40,00). A atualização leva menos de 5 minutos!"
+  // *   **Se aplicável, oferecer outros serviços relevantes com valores, baseado nos feedbacks e nas condições dos serviços.**
+  
+  // **A mensagem deve:**
+  
+  // *   Ser concisa, amigável e com alto potencial de venda.
+  // *   Apontar as melhorias mais importantes, baseadas na análise.
+  // *   Informar os valores dos serviços *somente quando a necessidade for identificada*.
+  // *   Deixar claro que a atualização das fotos exige que o cliente as forneça.
+  
+  // **RETORNE APENAS UM JSON ESTRITAMENTE VÁLIDO, SEM TEXTO ADICIONAL, NO SEGUINTE FORMATO:**
+  
+  // \`\`\`json
+  // {
+  //   "score": number,
+  //   "feedback": string[] | null,
+  //   "consultingMessage": string | null
+  // }
+  // \`\`\`
+  // `;
+  // }
+
   private buildPrompt(place: PlaceDetailsResult): string {
     return `
-Você é um especialista em análise de dados de estabelecimentos comerciais do Google Meu Negócio. Sua tarefa é avaliar a qualidade das informações de um estabelecimento com base nos dados fornecidos e atribuir um score de 0 a 100.
-
-Um score mais alto indica que o estabelecimento tem informações mais completas, atualizadas e de alta qualidade em seu perfil, sugerindo que é um negócio bem gerenciado e menos propenso a precisar de serviços de marketing digital. Por outro lado, um score mais baixo sugere que o estabelecimento tem informações incompletas, desatualizadas ou de baixa qualidade, tornando-o um lead mais qualificado para serviços de marketing digital.
-
-**Analise os seguintes critérios e use todos os dados disponíveis no JSON fornecido para pontuar o estabelecimento:**
-
-**I. Informações Básicas e Completude:**
-
-1. **Existência e Validade de Dados Essenciais:**
-    *   **Nome:** O nome está presente e é coerente com um estabelecimento comercial?
-    *   **Endereço:** O endereço está completo (rua, número, bairro, cidade, estado, CEP)? A formatação está correta?
-    *   **Telefone:** O telefone está presente e em formato válido (considerando telefones fixos e celulares, locais e internacionais)?
-    *   **Website:** O website está presente? É um site próprio ou um link para rede social? (Redes sociais são menos desejáveis). O website fornecido é válido e acessível?
-    *   **Status de Funcionamento:** O \`business_status\` é \`OPERATIONAL\`? Outros status indicam problemas.
-
-2. **Horário de Funcionamento:**
-    *   **Disponibilidade:** O horário de funcionamento está presente?
-    *   **Detalhes:** O horário para cada dia da semana está especificado (\`weekday_text\`)?
-    *   **Consistência:** O horário está consistente com o tipo de negócio? (Por exemplo, um restaurante não deveria fechar no horário de almoço).
-    *   **\`current_opening_hours\` e \`open_now\`: ** O estabelecimento está aberto no momento da análise? Isso pode indicar se o horário está atualizado.
-
-**II. Engajamento e Reputação:**
-
-3. **Avaliações:**
-    *   **Quantidade:** Qual o \`user_ratings_total\`? Um número alto indica popularidade e engajamento.
-    *   **Nota Média (\`rating\`):** Qual a nota média? Notas acima de 4.5 são consideradas excelentes.
-    *   **Recência das Avaliações:** As avaliações são recentes (últimos 3 meses)? Avaliações antigas podem não refletir a realidade atual.
-    *   **Qualidade das Avaliações:** As avaliações possuem texto, além da nota? Avaliações com texto são mais valiosas.
-    *   **Presença de avaliações negativas:** Existem avaliações com nota baixa (1 ou 2)? Isso pode indicar problemas a serem resolvidos.
-
-**III. Presença Online e Qualidade da Informação:**
-
-5. **Fotos:**
-    *   **Quantidade:** Quantas fotos (\`photos\`) o estabelecimento possui?
-    *   **Qualidade:** As fotos são de alta resolução (\`height\`, \`width\`)?
-    *   **Diversidade:** As fotos mostram o interior, o exterior, os produtos, a equipe e clientes (se aplicável)?
-    *   **\`html_attributions\`: ** As fotos são atribuídas ao proprietário do negócio ou a usuários? Fotos do proprietário são preferíveis.
-
-6. **Atributos (\`types\`):**
-    *   **Relevância:** Os \`types\` atribuídos ao estabelecimento são relevantes e específicos? Por exemplo, "restaurant" é menos específico do que "italian_restaurant".
-    *   **Quantidade:** Há uma boa quantidade de \`types\` atribuídos, detalhando bem o negócio?
-
-7. **\`plus_code\`**
-    *   **Disponibilidade**: O estabelecimento possui \`plus_code\`? O \`plus_code\` pode ser usado para identificar a localização do estabelecimento, especialmente em áreas onde o endereçamento tradicional não é tão preciso.
-
-8. **\`vicinity\`**
-    *   **Informatividade**: O campo \`vicinity\` oferece uma descrição útil e concisa da localização do estabelecimento, especialmente quando o endereço completo não está disponível ou é muito longo?
-
-**IV. Dados Adicionais (Menor Peso na Pontuação):**
-
-9. **Outros Atributos:**
-*   **\`reservable\`, \`serves_breakfast\`, \`serves_lunch\`, \`serves_dinner\`, \`serves_beer\`, \`serves_wine\`, \`takeout\`, \`delivery\`, \`dine_in\`, \`wheelchair_accessible_entrance\`, \`curbside_pickup\`:** Estes atributos, quando presentes, indicam um maior detalhamento do perfil e dos serviços oferecidos.
-
-**Não mencione na resposta critérios que dependem de análises manuais ou que vão além das informações oferecidas acima, como a qualidade do website e a interação nas redes sociais.**
-
-Aqui estão os dados do estabelecimento:
-
-\`\`\`json
-${JSON.stringify(place.result, null, 2)}
-\`\`\`
-
-Com base nesses dados, atribua um score de 0 a 100 ao estabelecimento e forneça uma lista de feedbacks com sugestões de melhorias, quando aplicável.
-
-Não crie feedbacks que não tenham como base dados disponíveis do JSON fornecido acima, ou seja, não faça presunções.
-
-Quando aplicável, escreva uma mensagem personalizada que poderá ser usada para enviar ao WhatsApp do estabelecimento, oferecendo o serviço de consultoria e atualização dos dados no Google Meu Negócio. Escreva uma mensagem com alto potencial de venda, que seja concisa, mas amigável, e aponte as melhorias mais importantes que podem ser feitas, baseada na análise. Informar que o processo de atualização no Google leva menos de 5 minutos, e o valor do serviço é muito barato, apenas R$ 50,00.
-
-Fotografia profissional não está incluso nos meus serviços, mas sim a atualização das fotos do estabelecimento no Google Meu Negócio. Deixe claro que, quanto a isso, caso o estabelecimento se enquadre nesta necessidade, a atualização das fotos exige que o cliente tenha as novas fotos para utilização.
-
-**RETORNE APENAS UM JSON ESTRITAMENTE VÁLIDO, SEM TEXTO ADICIONAL. CERTIFIQUE-SE DE QUE SUA RESPOSTA SEJA UM OBJETO JSON VÁLIDO, COM CHAVES E VALORES ENTRE ASPAS DUPLAS, E QUE NÃO HAJA VÍRGULAS SOLTAS APÓS O ÚLTIMO ELEMENTO DE UM ARRAY OU OBJETO.**
-
-**NÃO INCLUA QUALQUER TEXTO FORA DO OBJETO JSON.**
-
-Sua resposta DEVE seguir o seguinte formato:
-
-\`\`\`json
-{
-  "score": number,
-  "feedback": string[] | null,
-  "consultingMessage": string | null
-}
-\`\`\`
-`;
+  Você é um especialista em análise de dados de estabelecimentos comerciais do Google Meu Negócio. Sua tarefa é avaliar a qualidade das informações de um estabelecimento com base nos dados fornecidos e atribuir um score de 0 a 100. Um score mais alto indica informações completas e de alta qualidade, enquanto um score mais baixo indica informações incompletas ou desatualizadas.
+  
+  **Analise os seguintes critérios usando os dados do JSON abaixo:**
+  
+  *   **Existência e Validade de Dados Essenciais:** Nome, endereço completo e formatado, telefone, website (próprio, não rede social) e status de funcionamento (\`business_status\`).
+  *   **Horário de Funcionamento:** Disponibilidade, detalhes por dia da semana (\`weekday_text\`) e consistência.
+  *   **Avaliações:** Quantidade (\`user_ratings_total\`), nota média (\`rating\`), recência (últimos 3 meses) e qualidade (avaliações com texto).
+  *   **Fotos:** Quantidade (\`photos\`), diversidade e atribuição ao proprietário (\`html_attributions\`).
+  *   **Atributos (\`types\`):** Relevância e quantidade.
+  *   **\`plus_code\` e \`vicinity\`:** Disponibilidade e informatividade.
+  *   **Outros Atributos (\`reservable\`, \`serves_breakfast\`, etc.):** Presença e relevância.
+  
+  **Dados do Estabelecimento:**
+  
+  \`\`\`json
+  ${JSON.stringify(place.result, null, 2)}
+  \`\`\`
+  
+  **Com base nesses dados, atribua um score de 0 a 100 e gere feedbacks com sugestões de melhorias.**
+  
+  **Lembre-se:**
+  
+  *   Não mencione critérios que dependem de análises manuais (qualidade do website, interação em redes sociais, etc.).
+  *   Não faça presunções, baseie-se apenas nos dados fornecidos.
+  
+  **Se aplicável, gere uma mensagem personalizada para WhatsApp oferecendo os seguintes serviços, com base nos feedbacks gerados:**
+  
+  *   **Atualização do Cadastro no Google Meu Negócio:** Se houver informações básicas ausentes ou desatualizadas, nota média < 4.5 ou score geral < 70.
+  *   **Consultoria em Estratégias para Satisfação de Clientes:** Se nota média < 3.5.
+  *   **Alavancagem de Negócio com Marketing Digital:** Se houver menos de 5 avaliações.
+  *   **Criação de Website:** Se não houver website.
+  
+  **A mensagem deve seguir o seguinte exemplo de roteiro, e incluir as seguintes informações, SEMPRE que houver pontos de melhoria identificados:**
+  
+  *   **Quantidade de Pontos de Melhoria:** "Identificamos X pontos no cadastro do seu estabelecimento no Google Meu Negócio que pode estar fazendo você perder clientes!"
+  *   **Oferta de Atualização Automática:** "Oferecemos um serviço de atualização automática do cadastro do seu estabelecimento, que leva apenas 5 minutos. Num piscar de olhos, todos os gargalos que encontramos no cadastro do seu negócio vão ser resolvidos!
+  *   **Oferta de Relatório:** "...Ou então, podemos te oferecer um relatório detalhado desses pontos, além das informações já otimizadas para atualização, para que você possa maximizar o nível de atratividade, profissionalismo e confiabilidade do seu negócio, atraindo muito mais clientes."
+  *   **Se aplicável, oferecer outros serviços relevantes, baseado nos feedbacks e nas condições dos serviços.**
+  *   **Call To Action:**: "Caso esteja interessado na consultoria e queira saber mais, basta responder esta mensagem."
+  *   **Despedida Amigável:** "Estamos ansiosos para poder ajudar o seu negócio a ter seu máximo potencial online! 🙂"
+  
+  **A mensagem acima é apenas um sugestão, mas a mensagem deve:**
+  
+  *   **Passar credibilidade, profissionalismo, ser amigável e com alto potencial de venda.**
+  *   **Incentivar o cliente a entrar em contato para saber mais sobre os serviços e valores, criando um senso de urgência, exclusividade e atendimento personalizado.**
+  *   **A mensagem pode ser customizada de acordo com o tipo de estabelecimento ou necessidades específicas, não precisando seguir à risca o exemplo acima, mas deve sempre seguir a mesma ideia do exemplo**.
+  
+  **RETORNE APENAS UM JSON ESTRITAMENTE VÁLIDO, SEM TEXTO ADICIONAL, NO SEGUINTE FORMATO:**
+  
+  \`\`\`json
+  {
+    "score": number,
+    "feedback": string[] | null,
+    "consultingMessage": string | null
+  }
+  \`\`\`
+  `;
   }
 }
 

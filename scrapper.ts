@@ -222,12 +222,13 @@ interface PlacesNearbyResult {
 
 interface PlaceResult {
   place_id: string;
-  [key: string]: any; // You can define more specific properties here
+  [key: string]: any;
 }
 
 interface PlaceDetailsResult {
   result: PlaceResult;
   status: string;
+  suggestedServices: string[];
   error_message?: string;
 }
 
@@ -353,17 +354,62 @@ class FileUtils {
 
   static outputResults(results: PlaceDetailsResult[]): void {
     try {
-      const fileName = `results-${new Date()
-        .toISOString()
-        .replace(/[-:.]/g, "")}.json`;
-      writeFileSync(fileName, JSON.stringify(results, null, 2));
-      const fullPath = fs.realpathSync(fileName);
-      console.log(`Resultados salvos em: ${fullPath}`);
+      const timestamp = new Date().toISOString().replace(/[-:.]/g, "");
+
+      // JSON
+      const jsonFileName = `results-${timestamp}.json`;
+      writeFileSync(jsonFileName, JSON.stringify(results, null, 2));
+      const fullJsonPath = fs.realpathSync(jsonFileName);
+      console.log(`Resultados JSON salvos em: ${fullJsonPath}`);
+
+      // Markdown
+      const markdownFileName = `results-${timestamp}.md`;
+      const markdownContent = this.generateMarkdownReport(results);
+      writeFileSync(markdownFileName, markdownContent);
+      const fullMarkdownPath = fs.realpathSync(markdownFileName);
+      console.log(`Relatório Markdown salvo em: ${fullMarkdownPath}`);
     } catch (error) {
       throw new FileError(
         error instanceof Error ? error.message : String(error)
       );
     }
+  }
+
+  static generateMarkdownReport(results: PlaceDetailsResult[]): string {
+    let markdown = "# Relatório de Estabelecimentos\n\n";
+
+    results.forEach((place: PlaceDetailsResult, index: number) => {
+      markdown += `## ${index + 1}. ${place.result.name}\n\n`;
+      markdown += `- **Telefone:** ${
+        place.result.formatted_phone_number || "Não informado"
+      }\n`;
+      markdown += `- **Website:** ${place.result.website || "Não informado"}\n`;
+      markdown += `- **Horários de Funcionamento:**\n`;
+      if (place.result.opening_hours?.weekday_text) {
+        place.result.opening_hours.weekday_text.forEach((day) => {
+          markdown += `  - ${day}\n`;
+        });
+      } else {
+        markdown += `  - Não informado\n`;
+      }
+      markdown += `- **Avaliações:** ${
+        place.result.user_ratings_total || 0
+      } avaliações, Nota média: ${place.result.rating || "N/A"}\n`;
+      markdown += `- **Endereço:** ${
+        place.result.formatted_address || "Não informado"
+      }\n`;
+      markdown += `- **Serviços Sugeridos:**\n`;
+      if (place.suggestedServices?.length) {
+        place.suggestedServices.forEach((service) => {
+          markdown += `  - ${service}\n`;
+        });
+      } else {
+        markdown += `  - Nenhum serviço sugerido\n`;
+      }
+      markdown += "\n";
+    });
+
+    return markdown;
   }
 }
 

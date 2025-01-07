@@ -776,7 +776,7 @@ class AIPlaceScoreCalculator implements PlaceScoreCalculator {
   
   **A mensagem deve seguir o seguinte exemplo de roteiro, e incluir as seguintes informações, SEMPRE que houver pontos de melhoria identificados:**
   
-  *   **Quantidade de Pontos de Melhoria:** "Identificamos X pontos no cadastro do seu estabelecimento no Google Meu Negócio que pode estar fazendo você perder clientes!"
+  *   **Quantidade de Pontos de Melhoria:** "Identificamos X pontos no cadastro do seu estabelecimento no Google Meu Negócio que pode estar fazendo você perder clientes, mas podemos te ajudar."
   *   **Oferta de Atualização Automática:** "Oferecemos um serviço de atualização automática do cadastro do seu estabelecimento, que leva apenas 5 minutos. Num piscar de olhos, todos os gargalos que encontramos no cadastro do seu negócio vão ser resolvidos!
   *   **Oferta de Relatório:** "...Ou então, podemos te oferecer um relatório detalhado desses pontos, além das informações já otimizadas para atualização, para que você possa maximizar o nível de atratividade, profissionalismo e confiabilidade do seu negócio, atraindo muito mais clientes."
   *   **Se aplicável, oferecer outros serviços relevantes, baseado nos feedbacks e nas condições dos serviços.**
@@ -793,7 +793,7 @@ class AIPlaceScoreCalculator implements PlaceScoreCalculator {
 
   **NÃO MENCIONE O NOME DAS PROPRIEDADES DO JSON NA MENSAGEM, E NÃO USE TERMOS EXTREMAMENTE TÉCNICOS, POIS A MENSAGEM SERÁ USADA PARA ABORDAGEM COMERCIAL, ENVIADA PARA O WHATSAPP DA EMPRESA.**
 
-  **O SERVIÇO QUE DEVE SER ENFATIZADO É O DE ATUALIZAÇÃO DE CADASTRO NO GOOGLE MEU NEGÓCIO, SENDO OS OUTROS SERVIÇOS COMO SECUNDÁRIOS.**
+  **O SERVIÇO QUE DEVE SER ENFATIZADO É O DE ATUALIZAÇÃO DE CADASTRO NO GOOGLE MEU NEGÓCIO, SENDO OS OUTROS SERVIÇOS COMO SECUNDÁRIOS, COMO O DE DESENVOLVIMENTO DE WEBSITES, QUANDO APLICÁVEIS, DEVEM SER MENCIONADOS SOMENTE AO FINAL DA MENSAGEM.**
 
   **RETORNE APENAS UM JSON ESTRITAMENTE VÁLIDO, SEM TEXTO ADICIONAL, NO SEGUINTE FORMATO:**
   

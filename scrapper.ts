@@ -791,6 +791,8 @@ class AIPlaceScoreCalculator implements PlaceScoreCalculator {
   
   **A natureza da linguagem usada na mensagem, que pode ser desde a mais casual até mais formal, e a liberdade no uso de emojis, deve estar de acordo com o tipo do negócio alvo. Use a melhor abordagem para cada tipo de negócio!
 
+  **NÃO MENCIONE O NOME DAS PROPRIEDADES DO JSON NA MENSAGEM, E NÃO USE TERMOS EXTREMAMENTE TÉCNICOS, POIS A MENSAGEM SERÁ USADA PARA ABORDAGEM COMERCIAL, ENVIADA PARA O WHATSAPP DA EMPRESA.**
+
   **RETORNE APENAS UM JSON ESTRITAMENTE VÁLIDO, SEM TEXTO ADICIONAL, NO SEGUINTE FORMATO:**
   
   \`\`\`json

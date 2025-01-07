@@ -270,7 +270,7 @@ interface AddressAnalysisResult {
 class InformationQualityAnalyzer {
   private static readonly GOOGLE_AI_STUDIO_API_KEY: string | undefined =
     process.env.GOOGLE_AI_STUDIO_API_KEY;
-  private static readonly MODEL_NAME: string = "gemini-1.5-pro";
+  private static readonly MODEL_NAME: string = process.env.MODEL as string | "gemini-1.5-flash";
   private static readonly API_ENDPOINT: string = `https://generativelanguage.googleapis.com/v1beta/models/${this.MODEL_NAME}:generateContent?key=${this.GOOGLE_AI_STUDIO_API_KEY}`;
 
   /**
@@ -652,8 +652,8 @@ class FileUtils {
       if (place._OVERALL_ANALYSIS_RESULT) {
         markdown += `- **Análise Geral:**\n`;
         markdown += `  - **Pontuação:** ${place._OVERALL_ANALYSIS_RESULT.score}\n`;
-        markdown += `  - **Feedback:** \n    * ${place._OVERALL_ANALYSIS_RESULT.feedback?.join(
-          "\n    * "
+        markdown += `  - **Feedback:** \n    - ${place._OVERALL_ANALYSIS_RESULT.feedback?.join(
+          "\n    - "
         )}\n`;
       } else {
         markdown += `- **Análise Geral:** Não disponível\n`;
@@ -836,7 +836,7 @@ class DefaultPlaceScoreCalculator implements PlaceScoreCalculator {
 class AIPlaceScoreCalculator implements PlaceScoreCalculator {
   private static readonly GOOGLE_AI_STUDIO_API_KEY: string | undefined =
     process.env.GOOGLE_AI_STUDIO_API_KEY;
-  private static readonly MODEL_NAME: string = "gemini-1.5-pro";
+  private static readonly MODEL_NAME: string = process.env.MODEL as string | "gemini-1.5-flash";
   private static readonly API_ENDPOINT: string = `https://generativelanguage.googleapis.com/v1beta/models/${AIPlaceScoreCalculator.MODEL_NAME}:generateContent?key=${AIPlaceScoreCalculator.GOOGLE_AI_STUDIO_API_KEY}`;
 
   /**
